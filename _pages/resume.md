@@ -1,104 +1,134 @@
 ---
 title: "Resume"
-permalink: /resume/
 layout: single
+permalink: /resume/
 author_profile: true
+classes: wide
 ---
 
+<section class="resume-intro">
+  <h1>📄 My Resume</h1>
+  <p>Looking to collaborate or hire? Download my resume or explore my experience and skills below.</p>
+  <a href="{{ '/assets/resume.pdf' | relative_url }}" class="btn--primary" target="_blank" download>Download PDF</a>
+</section>
+
+<hr>
+
+<section class="resume-section">
+  <h2>🧑‍💼 Professional Summary</h2>
+  <div class="highlight-block">
+    Results-driven <strong>Network & Cloud Engineer</strong> with 3+ years of experience in network automation, cloud infrastructure, DevOps, and IT operations. Skilled in <strong>Python, Bash, Terraform, Ansible, AWS, Azure, Linux</strong>, and committed to building scalable, secure, and efficient infrastructure solutions.
+  </div>
+</section>
+
+<section class="resume-section">
+  <h2>💼 Experience Highlights</h2>
+  <div class="experience-grid">
+    <div class="experience-card">
+      <h3>Customer Network Engineer – Liquid Intelligent Technologies</h3>
+      <p>Automated provisioning of Nokia and VSOL ONTs, monitored network performance, and resolved customer connectivity issues efficiently.</p>
+    </div>
+    <div class="experience-card">
+      <h3>Cloud & DevOps Projects</h3>
+      <p>Provisioned AWS EC2 instances, configured VPC networking, implemented CI/CD workflows with GitHub Actions, and automated health checks using Ansible.</p>
+    </div>
+    <div class="experience-card">
+      <h3>Automation & Scripting</h3>
+      <p>Developed Python and Bash scripts for network audits, reporting, and remote device configuration.</p>
+    </div>
+  </div>
+</section>
+
+<section class="resume-section">
+  <h2>🧠 Skills Snapshot</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h4>Networking</h4>
+      <p>Routing & Switching, VPN, Firewalls, TR-069 provisioning, VLAN management</p>
+    </div>
+    <div class="skill-card">
+      <h4>Cloud & DevOps</h4>
+      <p>AWS (EC2, VPC), Azure Fundamentals, Terraform, Ansible, CI/CD pipelines</p>
+    </div>
+    <div class="skill-card">
+      <h4>Automation & Scripting</h4>
+      <p>Python, Bash, Pandas, Linux CLI tools, Excel reporting</p>
+    </div>
+    <div class="skill-card">
+      <h4>Monitoring & Troubleshooting</h4>
+      <p>Network monitoring, log analysis, performance optimization</p>
+    </div>
+  </div>
+</section>
+
 <style>
-/* Base Styles */
-body, h1, h2, h3, p, li {
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  font-size: 15px;
-  color: #333;
-  line-height: 1.6;
+/* Base styling */
+.resume-intro {
+  text-align: center;
+  margin-bottom: 2rem;
 }
-
-section {
-  padding: 0 1rem;
-  max-width: 900px;
-  margin: 0 auto 2.5rem;
-}
-
-ul {
-  padding-left: 1.3em;
-  margin-bottom: 1.2rem;
-}
-
-h2 {
-  font-weight: 600;
-  color: #222;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-.btn--primary {
+.resume-intro .btn--primary {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
   background-color: #007acc;
   color: #fff;
+  border-radius: 6px;
   text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s ease;
+  font-weight: bold;
+}
+.resume-intro .btn--primary:hover {
+  background-color: #005f99;
 }
 
-.btn--primary:hover {
-  background-color: #005ea8;
+.resume-section {
+  margin-bottom: 3rem;
 }
 
 .highlight-block {
   background-color: #f9f9f9;
   border-left: 4px solid #007acc;
-  padding: 1rem;
+  padding: 1.2rem;
   border-radius: 8px;
-  margin-bottom: 2rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.experience-grid, .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.8rem;
+  margin-top: 1rem;
+}
+
+.experience-card, .skill-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.experience-card:hover, .skill-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.experience-card h3, .skill-card h4 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  color: #007acc;
+}
+
+.experience-card p, .skill-card p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95em;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .highlight-block {
-    padding: 0.8rem;
-  }
-  .btn--primary {
-    padding: 0.4rem 0.9rem;
-    font-size: 0.9em;
+  .experience-grid, .skills-grid {
+    grid-template-columns: 1fr;
   }
 }
 </style>
-
-<section>
-  <h1>📄 Resume</h1>
-
-  <p>Looking to collaborate or hire? Download my resume or explore my background below.</p>
-  👉 <a href="{{ '/assets/resume.pdf' | relative_url }}" class="btn--primary" target="_blank" download>Download PDF</a>
-</section>
-
-<hr>
-
-<section class="highlight-block">
-  <h2>🧑‍💼 Professional Summary</h2>
-  <p>
-    Results-driven <strong>Network & Cloud Engineer</strong> with 3+ years of experience in network automation, cloud infrastructure, DevOps, and IT operations. Skilled in <strong>Python, Bash, Terraform, Ansible, AWS, Azure, Linux</strong>, and committed to building scalable, secure, and efficient infrastructure solutions.
-  </p>
-</section>
-
-<section class="highlight-block">
-  <h2>💼 Experience Highlights</h2>
-  <ul>
-    <li><strong>Customer Network Engineer – Liquid Intelligent Technologies:</strong> Automated provisioning of Nokia and VSOL ONTs, monitored network performance, and resolved customer connectivity issues efficiently.</li>
-    <li><strong>Cloud & DevOps Projects:</strong> Provisioned AWS EC2 instances, configured VPC networking, implemented CI/CD workflows with GitHub Actions, and automated health checks using Ansible.</li>
-    <li><strong>Automation & Scripting:</strong> Developed Python and Bash scripts for network audits, reporting, and remote device configuration.</li>
-  </ul>
-</section>
-
-<section class="highlight-block">
-  <h2>🧠 Skills Snapshot</h2>
-  <ul>
-    <li><strong>Networking:</strong> Routing & Switching, VPN, Firewalls, TR-069 provisioning, VLAN management</li>
-    <li><strong>Cloud & DevOps:</strong> AWS (EC2, VPC), Azure Fundamentals, Terraform, Ansible, CI/CD pipelines</li>
-    <li><strong>Automation & Scripting:</strong> Python, Bash, Pandas, Linux CLI tools, Excel reporting</li>
-    <li><strong>Monitoring & Troubleshooting:</strong> Network monitoring, log analysis, performance optimization</li>
-  </ul>
-  <p>📎 <em>Full resume available in the downloadable PDF above.</em></p>
-</section>
