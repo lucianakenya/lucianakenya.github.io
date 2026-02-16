@@ -9,7 +9,7 @@ classes: wide
 <section class="resume-intro">
   <h1>📄 My Resume</h1>
   <p>Looking to collaborate or hire? Download my resume or explore my experience and skills below.</p>
-  <a href="{{ '/assets/resume.pdf' | relative_url }}" class="btn--primary" target="_blank" download>Download PDF</a>
+  <a href="{{ '/assets/resume.pdf.pdf' | relative_url }}" class="btn--primary" target="_blank" download>Download PDF</a>
 </section>
 
 <hr>
