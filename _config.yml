@@ -16,7 +16,7 @@
 title: Lucy Nyambura
 email: nyamburalucy678@gmail.com
 description: >- #this means to ignore newlines until "baseurl:"
-Network Engineer | Cloud Solutions | DevOps & Automation Enthusiast
+  Network Engineer | Cloud Solutions | DevOps & Automation Enthusiast
 linkedin_username: lucy-nyambura-5704a1232
 github_username: lucianakenya
 minimal_mistakes_skin: neon
@@ -76,20 +76,18 @@ author:
 footer:
   links:
     #- label: "Twitter"
-     # icon: "fab fa-fw fa-twitter-square"
-      #url: "https://twitter.com/"
+    #  icon: "fab fa-fw fa-twitter-square"
+    #  url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/lucianakenya"
-     - label: "Website"
+    - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://https://lucy-portfolio-ebon.vercel.app/"
+      url: "https://lucy-portfolio-ebon.vercel.app/"
     - label: "LinkedIn"
       icon: "fab fa-linkedin"
       url: "https://www.linkedin.com/in/lucy-nyambura-5704a1232/"
-    
-      #icon: "fab fa-fw fa-instagram"
-      #url: "https://instagram.com/"
+
 
 defaults:
   # _posts
