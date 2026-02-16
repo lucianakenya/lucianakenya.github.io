@@ -14,13 +14,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Lucy Nyambura
-email:
-description: >- # this means to ignore newlines until "baseurl:"
-  I am a Network Engineer with over 4 years of experience designing, securing, and optimizing enterprise infrastructure. Specializing in Cisco and Junos routing platforms, network automation, and cloud computing, I have a proven track record of reducing downtime by 47% through proactive network optimization. My expertise covers a broad range of tools, scripting languages, and automation frameworks to deliver resilient, high-performance network solutions tailored for hybrid cloud and on-premises environments. From provisioning Optical Network Terminals (ONTs) and configuring complex cloud networks to restoring service reliability, I approach each challenge with precision, adaptability, and a focus on operational excellence.
-My expertise spans tooling, scripting, and automation to deliver resilient, high-performance network solutions across hybrid environments. Whether it's provisioning ONTs, configuring cloud networks, or restoring service reliability, I bring precision and adaptability to every challenge.
-linkedin_username: username
-github_username: username
-minimal_mistakes_skin: default
+email: nyamburalucy678@gmail.com
+description: >- #this means to ignore newlines until "baseurl:"
+Network Engineer | Cloud Solutions | DevOps & Automation Enthusiast
+linkedin_username: lucy-nyambura-5704a1232
+github_username: lucianakenya
+minimal_mistakes_skin: neon
 search: true
 
 # Build settings
@@ -64,12 +63,12 @@ author:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://https://lucy-portfolio-ebon.vercel.app/"
-   # - label: "Twitter"
-      #icon: "fab fa-fw fa-twitter-square"
-      #url: "https://twitter.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/lucy-nyambura-5704a1232/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/lucianakenya"
+      url: "https://github.com/lucianakenya/"
     #- label: "Instagram"
       #icon: "fab fa-fw fa-instagram"
       #url: "https://instagram.com/"
@@ -82,7 +81,13 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/lucianakenya"
-    #- label: "Instagram"
+     - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://https://lucy-portfolio-ebon.vercel.app/"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/lucy-nyambura-5704a1232/"
+    
       #icon: "fab fa-fw fa-instagram"
       #url: "https://instagram.com/"
 
