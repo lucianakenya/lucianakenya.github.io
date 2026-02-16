@@ -6,38 +6,31 @@ author_profile: true
 classes: wide
 ---
 
-# 📬 Contact Me
+<div class="contact-container">
 
-I’d love to hear from you! Whether you have a question, a project idea, or want to collaborate, feel free to reach out.
+  <h1>📬 Contact Me</h1>
+  <p>I’d love to hear from you! Whether you have a question, a project idea, or want to collaborate, feel free to reach out.</p>
 
----
+  <section class="contact-section">
+    <h2>📧 Email</h2>
+    <p><a href="mailto:nyamburalucy678@gmail.com">nyamburalucy678@gmail.com</a></p>
+  </section>
 
-## 📧 Email
+  <section class="contact-section">
+    <h2>🔗 LinkedIn</h2>
+    <p><a href="https://www.linkedin.com/in/lucy-nyambura-5704a1232/" target="_blank">Lucy Nyambura</a></p>
+  </section>
 
-You can email me directly at:  
-[nyamburalucy678@gmail.com](mailto:nyamburalucy678@gmail.com)
+  <section class="contact-section">
+    <h2>💻 GitHub</h2>
+    <p><a href="https://github.com/lucianakenya/" target="_blank">github.com/lucianakenya</a></p>
+  </section>
 
----
-
-## 🔗 LinkedIn
-
-Connect with me on LinkedIn:  
-[Lucy Nyambura](https://www.linkedin.com/in/lucy-nyambura-5704a1232/)
-
----
-
-## 💻 GitHub
-
-Check out my projects and repositories:  
-[github.com/lucianakenya](https://github.com/lucianakenya/)
-
----
-
-## 📝 Send a Message
-
-<form action="https://formspree.io/f/mykdjewk" method="POST" class="contact-form">
-  <label for="name">Your Name:</label><br>
-  <input type="text" id="name" name="name" required><br><br>
+  <section class="contact-section">
+    <h2>📝 Send a Message</h2>
+    <form action="https://formspree.io/f/mykdjewk" method="POST" class="contact-form">
+      <label for="name">Your Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
 
   <label for="email">Your Email:</label><br>
   <input type="email" id="email" name="_replyto" required><br><br>
@@ -47,8 +40,44 @@ Check out my projects and repositories:
 
   <button type="submit">Send</button>
 </form>
+  </section>
+
+</div>
 
 <style>
+/* Container styling */
+.contact-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+/* Section spacing */
+.contact-section {
+  margin-top: 2rem;
+}
+
+/* Section headers */
+.contact-section h2 {
+  font-size: 1.4em;
+  color: #007acc;
+  margin-bottom: 0.5rem;
+}
+
+/* Links */
+.contact-section a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+/* Form styling */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -88,5 +117,12 @@ Check out my projects and repositories:
 
 .contact-form label {
   font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 1rem 1.2rem;
+  }
 }
 </style>
