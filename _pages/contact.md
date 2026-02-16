@@ -7,121 +7,213 @@ classes: wide
 ---
 
 <style>
-/* Contact Page Styles */
-.contact-hero {
+:root {
+  --primary: #1e40af;
+  --primary-dark: #1e3a8a;
+  --accent: #3b82f6;
+  --bg-light: #f8fafc;
+  --card-bg: #ffffff;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --border: #e2e8f0;
+  --shadow: 0 10px 40px rgba(0,0,0,0.08);
+  --shadow-hover: 0 20px 60px rgba(0,0,0,0.12);
+}
+
+.contact-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.hero-section {
   text-align: center;
-  padding: 4rem 1rem 3rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  border-radius: 24px;
   color: white;
-  margin: -2rem -2rem 3rem -2rem;
+  margin-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
 }
 
-.contact-hero h1 {
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.hero-section h1 {
   font-size: 2.8rem;
-  margin-bottom: 0.5rem;
   font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
-.contact-hero p {
+.hero-section p {
   font-size: 1.2rem;
   opacity: 0.95;
   max-width: 600px;
   margin: 0 auto;
-}
-
-.contact-main {
-  max-width: 900px;
-  margin: 0 auto 4rem;
-  padding: 0 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  margin: 3rem 0;
+  margin-bottom: 4rem;
 }
 
 .contact-card {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-  border: 1px solid rgba(0,122,204,0.1);
+  background: var(--card-bg);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
   text-align: center;
-  transition: all 0.3s ease;
-  height: 100%;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
 }
 
 .contact-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
-  border-color: #007acc;
+  transform: translateY(-12px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent);
+}
+
+.contact-card:hover::before {
+  transform: scaleX(1);
 }
 
 .contact-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+  color: white;
+  box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.05) rotate(5deg);
 }
 
 .contact-card h3 {
-  color: #222;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  color: var(--text-primary);
   margin-bottom: 1rem;
   font-weight: 600;
 }
 
-.contact-card a {
-  color: #007acc;
-  text-decoration: none;
-  font-weight: 500;
+.contact-card a,
+.contact-card p {
   font-size: 1.1rem;
+  color: var(--text-secondary);
+  text-decoration: none;
   display: block;
-  padding: 0.5rem 0;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .contact-card a:hover {
-  color: #005f99;
+  color: var(--primary);
 }
 
-.contact-form-container {
-  background: #fff;
-  padding: 2.5rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-  border: 1px solid rgba(0,122,204,0.1);
-  margin: 2rem 0;
+.form-container {
+  background: var(--card-bg);
+  padding: 3rem;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  position: relative;
 }
 
-.contact-form-container h2 {
+.form-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+.form-container h2 {
   text-align: center;
-  color: #222;
+  color: var(--text-primary);
   margin-bottom: 2rem;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
+  font-weight: 600;
 }
 
-.form-group {
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
+.form-group {
+  position: relative;
+}
+
 .form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  color: #333;
+  position: absolute;
+  top: 1rem;
+  left: 1.2rem;
+  color: var(--text-secondary);
+  font-weight: 500;
   font-size: 0.95rem;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.form-group input:focus + label,
+.form-group input:valid + label,
+.form-group textarea:focus + label,
+.form-group textarea:valid + label {
+  top: -0.5rem;
+  left: 0.8rem;
+  font-size: 0.8rem;
+  color: var(--primary);
+  background: var(--card-bg);
+  padding: 0 0.3rem;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 1rem 1.2rem;
-  border: 2px solid #e1e5e9;
-  border-radius: 10px;
+  padding: 1.2rem 1.2rem 1rem;
+  border: 2px solid var(--border);
+  border-radius: 14px;
   font-size: 1rem;
-  background: #f8fafc;
+  background: var(--bg-light);
   transition: all 0.3s ease;
   font-family: inherit;
 }
@@ -129,130 +221,122 @@ classes: wide
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #007acc;
-  background: #fff;
-  box-shadow: 0 0 0 3px rgba(0,122,204,0.1);
+  border-color: var(--primary);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(30, 64, 175, 0.1);
 }
 
 .form-group textarea {
   resize: vertical;
-  min-height: 120px;
+  min-height: 140px;
 }
 
-.submit-btn {
-  background: linear-gradient(135deg, #007acc, #005f99);
+.submit-button {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
   color: white;
-  padding: 1rem 2.5rem;
+  padding: 1.2rem 3rem;
   border: none;
-  border-radius: 10px;
+  border-radius: 14px;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
   width: 100%;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
 }
 
-.submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0,122,204,0.3);
+.submit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(30, 64, 175, 0.4);
 }
 
-.submit-btn:active {
-  transform: translateY(0);
+.submit-button:active {
+  transform: translateY(-1px);
 }
 
-.success-message,
-.error-message {
-  padding: 1rem;
-  border-radius: 10px;
-  margin: 1rem 0;
-  text-align: center;
-  font-weight: 500;
-}
-
-.success-message {
-  background: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
-}
-
-.error-message {
-  background: #f8d7da;
-  color: #721c24;
-  border: 1px solid #f5c6cb;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
-  .contact-hero {
-    margin: -1rem -1rem 2rem -1rem;
-    padding: 2.5rem 1rem;
+  .hero-section {
+    margin: 0 -1rem 3rem;
+    border-radius: 20px 20px 0 0;
+    padding: 3rem 1.5rem;
   }
   
-  .contact-hero h1 { font-size: 2.2rem; }
+  .hero-section h1 { font-size: 2.3rem; }
   
-  .contact-card,
-  .contact-form-container {
-    padding: 1.5rem;
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
   
-  .contact-grid { gap: 1.5rem; }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .form-container,
+  .contact-card {
+    padding: 2rem 1.5rem;
+  }
 }
 </style>
 
-<div class="contact-hero">
-  <h1>📬 Let's Connect</h1>
-  <p>Whether you have a project idea, need network expertise, or want to collaborate on cloud infrastructure, I'm here to help.</p>
-</div>
+<div class="contact-wrapper">
+  
+  <div class="hero-section">
+    <h1>📬 Let's Connect</h1>
+    <p>Reach out for network engineering, DevOps automation, or cloud infrastructure projects</p>
+  </div>
 
-<div class="contact-main">
   <div class="contact-grid">
     <div class="contact-card">
-      <span class="contact-icon">📧</span>
+      <div class="contact-icon">📧</div>
       <h3>Email</h3>
       <a href="mailto:nyamburalucy678@gmail.com">nyamburalucy678@gmail.com</a>
     </div>
 
   <div class="contact-card">
-    <span class="contact-icon">💻</span>
+    <div class="contact-icon">💻</div>
     <h3>GitHub</h3>
-    <a href="https://github.com/lucianakenya/" target="_blank">github.com/lucianakenya</a>
+    <a href="https://github.com/lucianakenya/" target="_blank">lucianakenya</a>
   </div>
 
   <div class="contact-card">
-    <span class="contact-icon">💼</span>
+    <div class="contact-icon">💼</div>
     <h3>LinkedIn</h3>
     <a href="https://www.linkedin.com/in/lucy-nyambura-5704a1232/" target="_blank">Lucy Nyambura</a>
   </div>
 
   <div class="contact-card">
-    <span class="contact-icon">📱</span>
+    <div class="contact-icon">📱</div>
     <h3>Phone</h3>
     <p>+254 703 498 550</p>
   </div>
   </div>
 
-  <div class="contact-form-container">
-    <h2>📝 Send Message</h2>
-    <form action="https://formspree.io/f/mykdjewk" method="POST" class="contact-form">
-      <div class="form-group">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required>
+  <div class="form-container">
+    <h2>Send Message</h2>
+    <form action="https://formspree.io/f/mykdjewk" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <input type="text" id="name" name="name" required>
+          <label for="name">Your Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="_replyto" required>
+          <label for="email">Your Email</label>
+        </div>
       </div>
-
+      
   <div class="form-group">
-    <label for="email">Your Email</label>
-    <input type="email" id="email" name="_replyto" required>
-  </div>
-
-  <div class="form-group">
+    <textarea id="message" name="message" required placeholder=" "></textarea>
     <label for="message">Your Message</label>
-    <textarea id="message" name="message" placeholder="Tell me about your project or question..." required></textarea>
   </div>
-
-  <button type="submit" class="submit-btn">Send Message</button>
+  
+  <button type="submit" class="submit-button">Get In Touch</button>
 </form>
   </div>
+
 </div>
