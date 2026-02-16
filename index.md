@@ -212,7 +212,7 @@ blockquote {
 <div class="hero">
   <h1>🌟 Lucy Nyambura</h1>
   <h2>Network Engineer • DevOps • Cloud Infrastructure</h2>
-  <p>3+ years building secure networks, automating infrastructure, and deploying scalable cloud solutions</p>
+  <p>4+ years building secure networks, automating infrastructure, and deploying scalable cloud solutions</p>
 </div>
 
 ## 🚀 Featured Projects
@@ -234,65 +234,65 @@ blockquote {
         <a href="https://github.com/lucianakenya/nokia-ont-provisioning" target="_blank">View Code →</a>
       </div>
 
-      <div class="project-card" data-category="networking">
-        <h3>🌐 VSOL ONT Provisioning</h3>
-        <p>Python SSH tool for TR-069 configuration on VSOL OLTs.</p>
-        <a href="https://github.com/lucianakenya/vsol-ont-automation" target="_blank">View Code →</a>
-      </div>
+  <div class="project-card" data-category="networking">
+    <h3>🌐 VSOL ONT Provisioning</h3>
+    <p>Python SSH tool for TR-069 configuration on VSOL OLTs.</p>
+    <a href="https://github.com/lucianakenya/vsol-ont-automation" target="_blank">View Code →</a>
+  </div>
 
-      <div class="project-card" data-category="networking">
-        <h3>🔧 TR-069 Remote Configurator</h3>
-        <p>Python script for remote ACS settings deployment on customer devices.</p>
-        <a href="https://github.com/lucianakenya/tr069-configurator" target="_blank">View Code →</a>
-      </div>
+  <div class="project-card" data-category="networking">
+    <h3>🔧 TR-069 Remote Configurator</h3>
+    <p>Python script for remote ACS settings deployment on customer devices.</p>
+    <a href="https://github.com/lucianakenya/tr069-configurator" target="_blank">View Code →</a>
+  </div>
 
-      <div class="project-card" data-category="networking">
-        <h3>📊 Power Levels Audit Tool</h3>
-        <p>SSH automation to gather ONT status, parse with pandas, export Excel reports.</p>
-        <a href="https://github.com/lucianakenya/ont-audit-tool" target="_blank">View Code →</a>
-      </div>
+  <div class="project-card" data-category="networking">
+    <h3>📊 Power Levels Audit Tool</h3>
+    <p>SSH automation to gather ONT status, parse with pandas, export Excel reports.</p>
+    <a href="https://github.com/lucianakenya/ont-audit-tool" target="_blank">View Code →</a>
+  </div>
 
-      <!-- Cloud Projects -->
-      <div class="project-card" data-category="cloud">
-        <h3>☁️ Linux EC2 Setup</h3>
-        <p>Provisioned and configured a secure Linux EC2 instance on AWS.</p>
-        <a href="https://github.com/lucianakenya/aws-ec2-setup" target="_blank">View Code →</a>
-      </div>
+  <!-- Cloud Projects -->
+  <div class="project-card" data-category="cloud">
+    <h3>☁️ Linux EC2 Setup</h3>
+    <p>Provisioned and configured a secure Linux EC2 instance on AWS.</p>
+    <a href="https://github.com/lucianakenya/aws-ec2-setup" target="_blank">View Code →</a>
+  </div>
 
-      <div class="project-card" data-category="cloud">
-        <h3>🌐 Amazon VPC Networking</h3>
-        <p>Created VPC resources with subnets, routing tables, and gateways.</p>
-        <a href="https://github.com/lucianakenya/aws-vpc-networking" target="_blank">View Code →</a>
-      </div>
+  <div class="project-card" data-category="cloud">
+    <h3>🌐 Amazon VPC Networking</h3>
+    <p>Created VPC resources with subnets, routing tables, and gateways.</p>
+    <a href="https://github.com/lucianakenya/aws-vpc-networking" target="_blank">View Code →</a>
+  </div>
 
-      <div class="project-card" data-category="cloud">
-        <h3>🚗 Car Rental Database on EC2</h3>
-        <p>MariaDB-powered system hosted on AWS with backup and monitoring setup.</p>
-        <a href="https://github.com/lucianakenya/car-rental-db" target="_blank">View Code →</a>
-      </div>
+  <div class="project-card" data-category="cloud">
+    <h3>🚗 Car Rental Database on EC2</h3>
+    <p>MariaDB-powered system hosted on AWS with backup and monitoring setup.</p>
+    <a href="https://github.com/lucianakenya/car-rental-db" target="_blank">View Code →</a>
+  </div>
 
-      <!-- DevOps Projects -->
-      <div class="project-card" data-category="devops">
-        <h3>🩺 Automated EC2 Health Checks</h3>
-        <p>Ansible playbook for EC2 monitoring with email alerts via AWS SES.</p>
-        <a href="https://github.com/lucianakenya/ec2-health-checks" target="_blank">View Code →</a>
-      </div>
+  <!-- DevOps Projects -->
+  <div class="project-card" data-category="devops">
+    <h3>🩺 Automated EC2 Health Checks</h3>
+    <p>Ansible playbook for EC2 monitoring with email alerts via AWS SES.</p>
+    <a href="https://github.com/lucianakenya/ec2-health-checks" target="_blank">View Code →</a>
+  </div>
 
-      <div class="project-card" data-category="devops">
-        <h3>🔄 Terraform Provisioning</h3>
-        <p>EC2 provisioning using Terraform for reproducible infrastructure.</p>
-        <a href="https://github.com/lucianakenya/terraform-ec2" target="_blank">View Code →</a>
-      </div>
+  <div class="project-card" data-category="devops">
+    <h3>🔄 Terraform Provisioning</h3>
+    <p>EC2 provisioning using Terraform for reproducible infrastructure.</p>
+    <a href="https://github.com/lucianakenya/terraform-ec2" target="_blank">View Code →</a>
+  </div>
 
-      <div class="project-card" data-category="devops">
-        <h3>⚡ CI/CD Pipeline</h3>
-        <p>GitHub Actions for automated testing and deployment pipelines.</p>
-        <a href="https://github.com/lucianakenya/ci-cd-pipeline" target="_blank">View Code →</a>
-      </div>
-    </div>
+  <div class="project-card" data-category="devops">
+    <h3>⚡ CI/CD Pipeline</h3>
+    <p>GitHub Actions for automated testing and deployment pipelines.</p>
+    <a href="https://github.com/lucianakenya/ci-cd-pipeline" target="_blank">View Code →</a>
+  </div>
+</div>
 
-    <button class="carousel-nav left" onclick="scrollCarousel(-1)">‹</button>
-    <button class="carousel-nav right" onclick="scrollCarousel(1)">›</button>
+<button class="carousel-nav left" onclick="scrollCarousel(-1)">‹</button>
+<button class="carousel-nav right" onclick="scrollCarousel(1)">›</button>
   </div>
 </div>
 
