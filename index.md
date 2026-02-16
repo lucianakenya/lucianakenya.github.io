@@ -193,73 +193,73 @@ With 3+ years of experience in network monitoring, VPN configuration, and cloud 
   <div class="carousel-container">
     <div class="carousel" id="projectCarousel">
 
-      <!-- Networking Projects -->
-      <div class="project-card" data-category="networking">
-        <h3>Nokia ONT Provisioning</h3>
-        <p>Bash automation for Wi-Fi setup, VLAN assignment, and logging on Nokia ONTs.</p>
-        <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project →</a>
-      </div>
+  <!-- Networking Projects -->
+  <div class="project-card" data-category="networking">
+    <h3>Nokia ONT Provisioning</h3>
+    <p>Bash automation for Wi-Fi setup, VLAN assignment, and logging on Nokia ONTs.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project →</a>
+  </div>
 
-      <div class="project-card" data-category="networking">
-        <h3>VSOL ONT Provisioning</h3>
-        <p>Python SSH tool for TR-069 configuration on VSOL OLTs.</p>
-        <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project →</a>
-      </div>
+  <div class="project-card" data-category="networking">
+    <h3>VSOL ONT Provisioning</h3>
+    <p>Python SSH tool for TR-069 configuration on VSOL OLTs.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project →</a>
+  </div>
 
-      <div class="project-card" data-category="networking">
-        <h3>TR-069 Remote Configurator</h3>
-        <p>Python script for remote ACS settings deployment on customer devices.</p>
-        <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project →</a>
-      </div>
+  <div class="project-card" data-category="networking">
+    <h3>TR-069 Remote Configurator</h3>
+    <p>Python script for remote ACS settings deployment on customer devices.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project →</a>
+  </div>
 
-      <div class="project-card" data-category="networking">
-        <h3>Power Levels Audit Tool</h3>
-        <p>SSH automation to gather ONT status, parse with pandas, export Excel reports.</p>
-        <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project →</a>
-      </div>
+  <div class="project-card" data-category="networking">
+    <h3>Power Levels Audit Tool</h3>
+    <p>SSH automation to gather ONT status, parse with pandas, export Excel reports.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project →</a>
+  </div>
 
-      <!-- Cloud Projects -->
-      <div class="project-card" data-category="cloud">
-        <h3>Linux EC2 Setup</h3>
-        <p>Provisioned and configured a secure Linux EC2 instance on AWS.</p>
-        <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project →</a>
-      </div>
+  <!-- Cloud Projects -->
+  <div class="project-card" data-category="cloud">
+    <h3>Linux EC2 Setup</h3>
+    <p>Provisioned and configured a secure Linux EC2 instance on AWS.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project →</a>
+  </div>
 
-      <div class="project-card" data-category="cloud">
-        <h3>Amazon VPC Networking</h3>
-        <p>Created VPC resources with subnets, routing tables, and gateways.</p>
-        <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project →</a>
-      </div>
+  <div class="project-card" data-category="cloud">
+    <h3>Amazon VPC Networking</h3>
+    <p>Created VPC resources with subnets, routing tables, and gateways.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project →</a>
+  </div>
 
-      <div class="project-card" data-category="cloud">
-        <h3>Car Rental Database on EC2</h3>
-        <p>MariaDB-powered system hosted on AWS with backup and monitoring setup.</p>
-        <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project →</a>
-      </div>
+  <div class="project-card" data-category="cloud">
+    <h3>Car Rental Database on EC2</h3>
+    <p>MariaDB-powered system hosted on AWS with backup and monitoring setup.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project →</a>
+  </div>
 
-      <!-- DevOps Projects -->
-      <div class="project-card" data-category="devops">
-        <h3>Automated EC2 Health Checks</h3>
-        <p>Ansible playbook for EC2 monitoring with email alerts via AWS SES.</p>
-        <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project →</a>
-      </div>
+  <!-- DevOps Projects -->
+  <div class="project-card" data-category="devops">
+    <h3>Automated EC2 Health Checks</h3>
+    <p>Ansible playbook for EC2 monitoring with email alerts via AWS SES.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project →</a>
+  </div>
 
-      <div class="project-card" data-category="devops">
-        <h3>Provisioning with Terraform</h3>
-        <p>EC2 provisioning using Terraform executed on AWS for reproducible infrastructure.</p>
-        <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project →</a>
-      </div>
+  <div class="project-card" data-category="devops">
+    <h3>Provisioning with Terraform</h3>
+    <p>EC2 provisioning using Terraform executed on AWS for reproducible infrastructure.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project →</a>
+  </div>
 
-      <div class="project-card" data-category="devops">
-        <h3>CI/CD Pipeline</h3>
-        <p>Continuous Integration & Deployment using GitHub Actions for automated deployments.</p>
-        <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project →</a>
-      </div>
+  <div class="project-card" data-category="devops">
+    <h3>CI/CD Pipeline</h3>
+    <p>Continuous Integration & Deployment using GitHub Actions for automated deployments.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project →</a>
+  </div>
 
-    </div>
+</div>
 
-    <button class="carousel-nav left" onclick="scrollCarousel(-1)">‹</button>
-    <button class="carousel-nav right" onclick="scrollCarousel(1)">›</button>
+<button class="carousel-nav left" onclick="scrollCarousel(-1)">‹</button>
+<button class="carousel-nav right" onclick="scrollCarousel(1)">›</button>
   </div>
 </div>
 
