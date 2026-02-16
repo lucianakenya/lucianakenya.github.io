@@ -2,7 +2,7 @@
 title: "My Projects"
 layout: single
 permalink: /projects/
-author_profile: false
+author_profile: true
 classes: wide
 ---
 
