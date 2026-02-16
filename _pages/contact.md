@@ -8,7 +8,7 @@ author_profile: true
   body, h1, h2, p, li {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     font-size: 15px;
-    color: #333;
+    color: #222; /* darker text for readability */
     line-height: 1.6;
   }
 
@@ -23,8 +23,8 @@ author_profile: true
     justify-content: space-between;
     gap: 2rem;
     backdrop-filter: blur(12px);
-    background: rgba(255, 255, 255, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.85); /* higher opacity for readability */
+    border: 1px solid rgba(200, 200, 200, 0.3);
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
     padding: 2rem;
@@ -34,7 +34,7 @@ author_profile: true
 
   .glass-column {
     flex: 1 1 45%;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.9); /* slightly solid */
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -42,7 +42,7 @@ author_profile: true
 
   h1, h2 {
     font-weight: 600;
-    color: #222;
+    color: #111; /* darker heading color */
     margin-bottom: 1rem;
   }
 
@@ -57,13 +57,15 @@ author_profile: true
 
   .coming-soon {
     font-style: italic;
-    background: linear-gradient(135deg, rgba(240, 240, 240, 0.3), rgba(255, 255, 255, 0.3));
+    background: linear-gradient(135deg, rgba(240, 240, 240, 0.6), rgba(255, 255, 255, 0.6));
     border: 1px dashed #ccc;
+    color: #222; /* make text darker */
   }
 
   a {
     color: #007acc;
     text-decoration: none;
+    font-weight: 500;
   }
 
   a:hover {
@@ -91,7 +93,7 @@ author_profile: true
       <li>📞 <strong>Phone:</strong> <a href="tel:+254703498550">+254 703 498 550</a></li>
       <li>💼 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/lucy-nyambura-5704a1232" target="_blank">linkedin.com/in/lucy-nyambura-5704a1232</a></li>
       <li>🐙 <strong>GitHub:</strong> <a href="https://github.com/lucianakenya" target="_blank">github.com/lucianakenya</a></li>
-      <li>📁 <strong>Resume:</strong> <a href="/resume/">View Resume</a></li>
+      <li>📁 <strong>Resume:</strong> <a href="/resume.pdf/">View Resume</a></li>
     </ul>
   </div>
 
