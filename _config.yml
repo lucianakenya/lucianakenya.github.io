@@ -58,7 +58,7 @@ plugins:
 
 author:
   name   : "Lucy Nyambura"
-  avatar : "/assets/images/my_photo.jpg"
+  avatar : "/assets/images/my_photo.jpeg"
   bio    : "I show up. I listen. I solve."
   links:
     - label: "Website"
