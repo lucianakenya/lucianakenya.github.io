@@ -286,3 +286,59 @@ With 3+ years of experience in network monitoring, VPN configuration, and cloud 
 - **LinkedIn:** <a href="https://www.linkedin.com/in/lucy-nyambura-5704a1232" target="_blank">linkedin.com/in/lucy-nyambura-5704a1232</a>
 
 > **"Networks are like puzzles and I enjoy solving them with code and creativity."**
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.getElementById('projectCarousel');
+    const projectCards = Array.from(carousel.children); // Convert HTMLCollection to Array
+    const filterButtons = document.querySelectorAll('.category-filter button');
+    let currentIndex = 0;
+    const cardsPerView = 3; // Adjust based on your design and screen size
+
+    function updateCarouselPosition() {
+      const cardWidth = projectCards[0].offsetWidth; // Get width of one card
+      const gap = parseFloat(getComputedStyle(carousel).gap);
+      const totalShift = (cardWidth + gap) * currentIndex;
+      carousel.style.transform = `translateX(-${totalShift}px)`;
+    }
+
+    // Carousel Navigation
+    window.scrollCarousel = function(direction) {
+      const totalCards = projectCards.filter(card => card.style.display !== 'none').length;
+      const visibleCards = cardsPerView; // Assuming this for calculation
+      const maxIndex = Math.max(0, totalCards - visibleCards);
+
+      currentIndex += direction;
+      if (currentIndex < 0) {
+        currentIndex = 0; // Don't scroll beyond the first card
+      } else if (currentIndex > maxIndex) {
+        currentIndex = maxIndex; // Don't scroll past the last visible set
+      }
+      updateCarouselPosition();
+    };
+
+    // Category Filtering
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Update active button
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+
+        const category = this.dataset.category;
+
+        // Reset carousel position and visibility for filtering
+        currentIndex = 0;
+        projectCards.forEach(card => {
+          if (category === 'all' || card.dataset.category === category) {
+            card.style.display = 'flex'; // Use 'flex' because your CSS sets display:flex
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        updateCarouselPosition(); // Ensure carousel position is reset after filtering
+      });
+    });
+
+    // Initialize carousel on load to correct position
+    updateCarouselPosition();
+  });
+</script>
