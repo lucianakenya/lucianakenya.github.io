@@ -2,109 +2,359 @@
 # You don't need to edit this file, it's empty on purpose.
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
+---
+layout: single
 author_profile: true
+description: "LUCY NYAMBURA - Full Stack Dev | Network Engineer | Cloud Computing"
+classes: wide
 ---
----
-title: "Lucy Nyambura | Network & Cloud Engineer"
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lucy Nyambura </title>
+  <style>
+    /* General Body */
+    body {
+      line-height: 1.6;
+      font-family: inherit;
+      background-color: #fafafa;
+      color: #222;
+    }
 
-[![AZ-900](https://img.shields.io/badge/AZ--900-Certified-blue?logo=microsoft-azure)](https://www.microsoft.com/en-us/learning/azure-fundamentals.aspx)
-[![Python](https://img.shields.io/badge/Python-Expert-yellow?logo=python)](https://www.python.org/)
-[![Ansible](https://img.shields.io/badge/Ansible-Intermediate-red?logo=ansible)](https://www.ansible.com/)
-[![Terraform](https://img.shields.io/badge/Terraform-Intermediate-blueviolet)](https://www.terraform.io/)
-[![Networking](https://img.shields.io/badge/IP--RAN-Expert-green)](#)
-[![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-Intermediate-orange?logo=githubactions)](https://github.com/features/actions)
+  section {
+    max-width: 900px;
+    margin: 0 auto 2.5rem;
+    padding: 0 1rem;
+  }
 
----
+  h2, h3 {
+    color: #222;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
 
-## 💼 About Me
+  p, li {
+    margin-bottom: 0.5rem;
+    max-width: 750px;
+  }
 
-I’m a Network Support & Customer Service Engineer with **3+ years** of experience in **IP-RAN, SOC monitoring, and network automation**.  
-I create tools that **automate repetitive tasks, enhance network reliability, and integrate cloud & DevOps practices**.  
+  ul {
+    padding-left: 1.3em;
+    margin-bottom: 1.2rem;
+  }
 
-Passionate about **scalable infrastructure, efficient operations, and hands-on automation**.
+  /* Carousel */
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 0;
+  }
 
----
+  .carousel {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.5s ease;
+    padding: 0 1rem;
+    will-change: transform;
+  }
 
-## 🛠 Technical Skills
+  .project-card {
+    flex: 0 0 auto;
+    width: 300px;
+    background: linear-gradient(145deg, #fff, #f0f0f0);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
-### 🔹 Networking & Monitoring
-* IP-RAN, TCP/IP, OSPF, VLANs, VPNs  
-* Network Monitoring: Zabbix, Nagios, SNMP, TR-069  
-* Service Provisioning & Fault Management
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  }
 
-### 🔹 Cloud
-* AWS: EC2, VPC, S3  
-* Microsoft Azure Fundamentals (AZ-900 Certified)
+  .project-card h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    margin-bottom: 0.8rem;
+  }
 
-### 🔹 Automation & Scripting
-* Python (Expert), Bash (Intermediate), Ansible (Intermediate)  
-* REST API integrations  
-* Automated reporting & audit tools
+  .project-card p {
+    font-size: 0.9em;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+  }
 
-### 🔹 DevOps & CI/CD
-* Terraform (Intermediate), GitHub Actions (Intermediate), Git  
-* CI/CD pipelines, automated deployments
+  .project-card a {
+    color: #007acc;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+  }
 
-### 🔹 Web & Static Sites
-* HTML, CSS, Static deployment (Vercel)
+  .project-card a:hover {
+    text-decoration: underline;
+  }
 
----
+  .carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255,255,255,0.8);
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    padding: 0.7rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s, border-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
 
-## 🚀 Featured Projects
+  .carousel-nav:hover {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+  }
 
-### 📌 Network Automation
+  .carousel-nav.left { left: 0.5rem; }
+  .carousel-nav.right { right: 0.5rem; }
 
-#### 🚀 vsol_provisioning_script
-Automates ONT provisioning on VSOL OLTs to **reduce errors and save time**.  
-![vsol screenshot](https://raw.githubusercontent.com/lucianakenya/vsol_provisioning_script/main/screenshot.png)  
-🔗 [GitHub](https://github.com/lucianakenya/vsol_provisioning_script)
+  /* Filter Buttons */
+  .category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.8rem;
+    justify-content: center;
+  }
 
-#### 🔧 configuring_TR-069
-Python tool for **remote TR-069 configuration**, improving device management efficiency.  
-![TR-069 screenshot](https://raw.githubusercontent.com/lucianakenya/configuring_TR-069/main/screenshot.png)  
-🔗 [GitHub](https://github.com/lucianakenya/configuring_TR-069)
+  .category-filter button {
+    background: #e9e9e9;
+    border: 1px solid #dcdcdc;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+    font-size: 0.9em;
+  }
 
-#### 📊 Power_levels_audit
-Automates **optical power level audits** and generates reports for quick analysis.  
-![Power levels audit screenshot](https://raw.githubusercontent.com/lucianakenya/Power_levels_audit/main/screenshot.png)  
-🔗 [GitHub](https://github.com/lucianakenya/Power_levels_audit)
+  .category-filter button.active {
+    background: #007acc;
+    color: white;
+    border-color: #007acc;
+  }
 
----
+  .category-filter button:hover {
+    background: #dcdcdc;
+  }
 
-### 🌐 Web & Static Projects
+  blockquote {
+    border-left: 4px solid #007acc;
+    padding-left: 1rem;
+    color: #555;
+    font-style: italic;
+    margin: 2rem 0;
+  }
+  </style>
+</head>
+<body>
+  <hr>
 
-#### 🌍 Portfolio
-Personal portfolio showcasing projects and skills.  
-![Portfolio screenshot](https://raw.githubusercontent.com/lucianakenya/portfolio/main/screenshot.png)  
-🔗 [GitHub](https://github.com/lucianakenya/portfolio)
+  🌟 Welcome to My Portfolio
 
-#### 🧩 BrightSteps Daycare
-Static HTML website for a daycare business.  
-![BrightSteps screenshot](https://raw.githubusercontent.com/lucianakenya/brightsteps-daycare/main/screenshot.png)  
-🔗 [GitHub](https://github.com/lucianakenya/brightsteps-daycare)
+  <p>
+    Hello! I'm <strong>Lucy Nyambura</strong>, a Network Engineer and Full Stack Developer specializing in Cloud Computing, Automation, and IT solutions. I design, implement, and optimize networks while building robust software applications.
+  </p>
 
----
+  <p>
+    With 3 years of experience in network monitoring, security protocols, VPN configuration, and cloud infrastructure, I excel at solving complex technical challenges and improving system performance.
+  </p>
 
-## 🖥 SOC & IP-RAN Monitoring Highlights
-* Automated **network monitoring alerts and fault detection**  
-* Integrated **TR-069 & SNMP monitoring** with reporting automation  
-* Built **performance dashboards** for IP-RAN network visibility  
-* Reduced manual fault checks by **50% using automation scripts**
+  🚀 Featured Projects
+  
+  <section class="projects-section">
+  <div class="category-filter">
+    <button class="active" data-category="all">All</button>
+    <button data-category="networking">Networking</button>
+    <button data-category="cloud">Cloud Projects</button>
+    <button data-category="devops">DevOps & Automation</button>
+  </div>
+  
+  <div class="carousel-container">
+    <div class="carousel" id="projectCarousel">
+  
+  <!-- Networking Projects -->
+  <div class="project-card" data-category="networking">
+    <h3>Nokia ONT Provisioning</h3>
+    <p>Bash automation for Wi‑Fi setup, VLAN assignment, and logging on Nokia ONTs.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project &rarr;</a>
+  </div>
+  
+  <div class="project-card" data-category="networking">
+    <h3>VSOL ONT Provisioning</h3>
+    <p>Python SSH tool for TR‑069 configuration on VSOL OLTs.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project &rarr;</a>
+  </div>
+  
+  <div class="project-card" data-category="networking">
+    <h3>TR‑069 Remote Configurator</h3>
+    <p>Python script for remote ACS settings deployment on customer devices.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project &rarr;</a>
+  </div>
+  
+  <div class="project-card" data-category="networking">
+    <h3>Power Levels Audit Tool</h3>
+    <p>SSH automation to gather ONT status, parse with pandas, and export Excel reports.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project &rarr;</a>
+  </div>
+  
+  <!-- Cloud Projects -->
+  <div class="project-card" data-category="cloud">
+    <h3>Linux EC2 Setup</h3>
+    <p>Provisioned and configured a secure Linux EC2 instance on AWS.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project &rarr;</a>
+  </div>
+  
+  <div class="project-card" data-category="cloud">
+    <h3>Amazon VPC Networking</h3>
+    <p>Created VPC resources with subnets, routing tables, and gateways.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project &rarr;</a>
+  </div>
+  
+  <div class="project-card" data-category="cloud">
+    <h3>Car Rental Database on EC2</h3>
+    <p>MariaDB-powered system hosted on AWS with backup and monitoring setup.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project &rarr;</a>
+  </div>
+  
+  <div class="project-card" data-category="cloud">
+    <h3>AWS CLI & IAM Exploration</h3>
+    <p>Hands-on practice with IAM roles, policies, and EC2 configuration via CLI.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project &rarr;</a>
+  </div>
+  
+  <div class="project-card" data-category="cloud">
+    <h3>Hosting a Static Website on S3</h3>
+    <p>Deployed a public responsive café site on S3 using static hosting.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project &rarr;</a>
+  </div>
+  
+  <div class="project-card" data-category="cloud">
+    <h3>S3 Bucket Security</h3>
+    <p>Secured S3 buckets using policies, versioning, and access restrictions.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project &rarr;</a>
+  </div>
+  
+  <!-- DevOps & Automation Projects -->
+  <div class="project-card" data-category="devops">
+    <h3>Automated EC2 Health Checks</h3>
+    <p>Ansible playbook for EC2 monitoring with email alerts via AWS SES.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project &rarr;</a>
+  </div>
+  
+  <div class="project-card" data-category="devops">
+    <h3>Provisioning with Terraform</h3>
+    <p>EC2 provisioning using Terraform executed on AWS for reproducible infrastructure.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project &rarr;</a>
+  </div>
+  
+  <div class="project-card" data-category="devops">
+    <h3>Continuous Integration & Deployment</h3>
+    <p>CI/CD workflow implementation using GitHub Actions for automated deployments.</p>
+    <a href="https://lucy-portfolio-ebon.vercel.app/" target="_blank">View Project &rarr;</a>
+  </div>
 
----
+  </div>
 
-## 📊 GitHub Stats
-![Lucy’s GitHub stats](https://github-readme-stats.vercel.app/api?username=lucianakenya&show_icons=true&theme=default)
+  <button class="carousel-nav left" onclick="scrollCarousel(-1)">&lt;</button>
+  <button class="carousel-nav right" onclick="scrollCarousel(1)">&gt;</button>
+  </div>
+</section>
 
----
 
-## 📫 Connect With Me
-* 🔗 **GitHub:** [lucianakenya](https://github.com/lucianakenya)  
-* 💼 **LinkedIn:** [Lucy Nyambura](https://www.linkedin.com/in/lucy-nyambura-5704a1232)  
-* 🌐 **Portfolio:** [lucy-portfolio-ebon.vercel.app](https://lucy-portfolio-ebon.vercel.app/)
+  <p style="text-align:center; margin-top:2rem;">
+    For more projects, visit the <a href="{{ '/projects/' | relative_url }}">Projects page</a>.
+  </p>
+  </section>
 
----
+  🌟 Key Expertise Areas
 
-> **“Automation + Networking + Cloud = Scalable & Reliable Infrastructure”**
+  <section>
+    <h3>💻 Software & Full Stack Development</h3>
+    <ul>
+      <li>Developed web applications using React, Node.js, Express, and PostgreSQL.</li>
+      <li>Built responsive, secure, and maintainable applications.</li>
+    </ul>
+
+  <h3>🌐 Networking & Cloud</h3>
+  <ul>
+    <li>Network monitoring, VPN setup, routing, and firewall configuration.</li>
+    <li>Cloud deployment and automation in Azure and AWS.</li>
+    <li>Infrastructure troubleshooting and optimization.</li>
+  </ul>
+
+  <h3>🤖 Automation & Scripting</h3>
+  <ul>
+    <li>Python scripting for network maintenance, reporting, and process automation.</li>
+    <li>Automating deployments and resource monitoring in cloud environments.</li>
+  </ul>
+  </section>
+
+  🤝 Let's Connect!
+
+  <ul>
+    <li><strong>Email:</strong> <a href="mailto:nyamburalucy678@gmail.com">nyamburalucy678@gmail.com</a></li>
+    <li><strong>Phone:</strong> +254 703 498 550</li>
+    <li><strong>GitHub:</strong> <a href="https://github.com/lucianakenya" target="_blank" rel="noopener noreferrer">github.com/lucianakenya</a></li>
+    <li><strong>LinkedIn:</strong> <a href="ttps://www.linkedin.com/in/lucy-nyambura-5704a1232" target="_blank" rel="noopener noreferrer">linkedin.com/in/lucy-nyambura-5704a1232</a></li>
+  </ul>
+
+  <blockquote>
+    <strong>“Networks are like puzzles and I enjoy solving them with code and creativity.”</strong>
+  </blockquote>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const carousel = document.getElementById('projectCarousel');
+      const projectCards = Array.from(carousel.children);
+      const filterButtons = document.querySelectorAll('.category-filter button');
+      let currentIndex = 0;
+      const cardsPerView = 3;
+
+      const updateCarousel = () => {
+        const cardWidth = projectCards[0].offsetWidth;
+        const gap = parseFloat(getComputedStyle(carousel).gap);
+        const shift = (cardWidth + gap) * currentIndex;
+        carousel.style.transform = `translateX(-${shift}px)`;
+      };
+
+      window.scrollCarousel = (direction) => {
+        const totalCards = projectCards.filter(c => c.style.display !== 'none').length;
+        const maxIndex = Math.max(0, totalCards - cardsPerView);
+        currentIndex = Math.min(Math.max(currentIndex + direction, 0), maxIndex);
+        updateCarousel();
+      };
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+          const category = this.dataset.category;
+          currentIndex = 0;
+          projectCards.forEach(card => {
+            card.style.display = (category === 'all' || card.dataset.category === category) ? 'flex' : 'none';
+          });
+          updateCarousel();
+        });
+      });
+
+      updateCarousel();
+    });
+  </script>
+</body>
+</html>
