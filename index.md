@@ -9,8 +9,6 @@ author_profile: true
 title: "Lucy Nyambura | Network & Cloud Engineer"
 ---
 
-# 🚀 Network Engineer | IP-RAN & SOC Specialist | Cloud & DevOps Enthusiast | Automation Builder
-
 [![AZ-900](https://img.shields.io/badge/AZ--900-Certified-blue?logo=microsoft-azure)](https://www.microsoft.com/en-us/learning/azure-fundamentals.aspx)
 [![Python](https://img.shields.io/badge/Python-Expert-yellow?logo=python)](https://www.python.org/)
 [![Ansible](https://img.shields.io/badge/Ansible-Intermediate-red?logo=ansible)](https://www.ansible.com/)
