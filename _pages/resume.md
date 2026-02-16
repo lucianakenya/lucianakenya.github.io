@@ -17,7 +17,7 @@ classes: wide
 <section class="resume-section">
   <h2>🧑‍💼 Professional Summary</h2>
   <div class="highlight-block">
-    Results-driven <strong>Network & Cloud Engineer</strong> with 3+ years of experience in network automation, cloud infrastructure, DevOps, and IT operations. Skilled in <strong>Python, Bash, Terraform, Ansible, AWS, Azure, Linux</strong>, and committed to building scalable, secure, and efficient infrastructure solutions.
+    Results-driven <strong>Network & Cloud Engineer</strong> with 4+ years of experience in network automation, cloud infrastructure, DevOps, and IT operations. Skilled in <strong>Python, Bash, Terraform, Ansible, AWS, Azure, Linux</strong>, and committed to building scalable, secure, and efficient infrastructure solutions.
   </div>
 </section>
 
