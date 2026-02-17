@@ -135,8 +135,8 @@ body {
 </style>
 
 <div class="projects-hero">
-  <h1>🚀 My Projects</h1>
-  <p>Networking, cloud infrastructure, and DevOps solutions I've built</p>
+  <h1> My Projects</h1>
+  <p>Showcasing real-world networking, cloud, and DevOps solutions I've built with automation and scalability in mind.</p>
 </div>
 
 <div class="category-tabs">
