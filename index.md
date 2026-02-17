@@ -26,7 +26,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Hero Section */
+/* Hero / About Me */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -53,7 +53,7 @@ body {
 .hero-content { 
   position: relative; 
   z-index: 1; 
-  max-width: 800px;
+  max-width: 750px;
   animation: fadeInUp 1s ease-out;
 }
 
@@ -63,7 +63,7 @@ body {
 }
 
 .hero h1 {
-  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-size: clamp(2.8rem, 7vw, 4rem);
   font-weight: 800;
   margin-bottom: 1rem;
   letter-spacing: -0.025em;
@@ -73,20 +73,10 @@ body {
   background-clip: text;
 }
 
-.hero-subtitle {
-  font-size: clamp(1.3rem, 3.5vw, 2.2rem);
-  font-weight: 400;
-  margin-bottom: 1.5rem;
-  opacity: 0.85;
-  letter-spacing: 0.025em;
-  color: var(--text-light);
-}
-
-.hero-tagline {
+.hero-text {
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  opacity: 0.8;
-  max-width: 600px;
-  margin: 0 auto 3rem;
+  opacity: 0.85;
+  margin-bottom: 3rem;
   font-weight: 300;
   color: var(--text-muted);
 }
@@ -208,15 +198,14 @@ body {
   </div>
   
   <div class="hero-content">
-    <h1>Lucy Nyambura</h1>
-    <h2 class="hero-subtitle">Network & Cloud Engineer • DevOps Enthusiast</h2>
-    <p class="hero-tagline">
-      Crafting reliable networks, automating cloud workflows, and delivering seamless digital experiences. 💡 Curious minds, let's explore together!
+    <h1>Hi, I'm Lucy</h1>
+    <p class="hero-text">
+      A Network & Cloud Engineer with 4+ years experience building secure networks, automating infrastructure, and delivering scalable cloud solutions. I specialize in DevOps, hybrid cloud environments, and network optimization.
     </p>
     
   <div class="cta-group">
-    <a href="/projects" class="cta-btn cta-primary">Peek at My Work</a>
-    <a href="/contact" class="cta-btn cta-secondary">Say Hello</a>
+    <a href="/projects" class="cta-btn cta-primary">See My Work</a>
+    <a href="/contact" class="cta-btn cta-secondary">Let's Talk</a>
   </div>
   </div>
   
