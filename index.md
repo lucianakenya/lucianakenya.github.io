@@ -191,9 +191,9 @@ body {
 </style>
   
   <div class="hero-content">
-    <h2>Hi, Welcome to My Portfolio</h2>
+    <h2>Welcome to My Portfolio</h2>
     <p class="hero-text">
-      Network Engineer with 4+ years designing, securing, and optimizing enterprise networks. Expert in Cisco/Junos routing, automation, and cloud tech—cut downtime 47% via proactive tweaks.[ from context] Skilled in tools, scripts, and frameworks for robust hybrid/on-prem solutions, from ONT provisioning and cloud configs to service recovery with precision and agility.
+      Hello,my name is Lucy Nyambura ,a Network Engineer with 4+ years designing, securing, and optimizing enterprise networks. Expert in Cisco/Junos routing, automation, and cloud tech—cut downtime 47% via proactive tweaks.Skilled in tools, scripts, and frameworks for robust hybrid/on-prem solutions, from ONT provisioning and cloud configs to service recovery with precision and agility.
     </p>
     
   <div class="cta-group">
