@@ -8,11 +8,12 @@ classes: wide
 ---
 
 <style>
-/* Minimal Landing - Hero Focus */
 :root {
-  --primary: #1e40af;
-  --accent: #3b82f6;
-  --bg: #f8fafc;
+  --primary: #3b82f6;
+  --accent: #60a5fa;
+  --bg: #0f172a;
+  --text-light: #f8fafc;
+  --text-muted: rgba(248,250,252,0.7);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -20,12 +21,12 @@ classes: wide
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background: var(--bg);
-  color: #1f2937;
+  color: var(--text-light);
   line-height: 1.7;
   overflow-x: hidden;
 }
 
-/* Hero */
+/* Hero Section */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -34,8 +35,7 @@ body {
   align-items: center;
   text-align: center;
   padding: 2rem;
-  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #1e40af 100%);
-  color: white;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
   position: relative;
   overflow: hidden;
 }
@@ -45,8 +45,9 @@ body {
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(circle at 25% 25%, rgba(255,255,255,0.15) 0%, transparent 40%),
-    radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 0%, transparent 40%);
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.03) 0%, transparent 50%);
+  z-index: 0;
 }
 
 .hero-content { 
@@ -66,7 +67,7 @@ body {
   font-weight: 800;
   margin-bottom: 1rem;
   letter-spacing: -0.025em;
-  background: linear-gradient(135deg, white 0%, rgba(255,255,255,0.9) 100%);
+  background: linear-gradient(135deg, var(--primary), var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -74,18 +75,20 @@ body {
 
 .hero-subtitle {
   font-size: clamp(1.3rem, 3.5vw, 2.2rem);
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 1.5rem;
-  opacity: 0.95;
+  opacity: 0.85;
   letter-spacing: 0.025em;
+  color: var(--text-light);
 }
 
 .hero-tagline {
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  opacity: 0.85;
+  opacity: 0.8;
   max-width: 600px;
-  margin: 0 auto 3.5rem;
+  margin: 0 auto 3rem;
   font-weight: 300;
+  color: var(--text-muted);
 }
 
 /* CTA Buttons */
@@ -94,48 +97,46 @@ body {
   gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
 }
 
 .cta-btn {
-  padding: 1.2rem 2.8rem;
+  padding: 1rem 2.5rem;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.1rem;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-size: 1rem;
+  transition: all 0.3s ease;
   border: 2px solid transparent;
   position: relative;
   overflow: hidden;
 }
 
 .cta-primary {
-  background: rgba(255,255,255,0.95);
-  color: var(--primary);
-  box-shadow: 0 10px 40px rgba(255,255,255,0.4);
+  background: var(--primary);
+  color: var(--text-light);
+  box-shadow: 0 10px 30px rgba(59,130,246,0.4);
 }
 
 .cta-primary:hover {
-  background: white;
-  transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 25px 50px rgba(255,255,255,0.6);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 20px 50px rgba(59,130,246,0.6);
 }
 
 .cta-secondary {
   background: transparent;
-  color: rgba(255,255,255,0.95);
-  backdrop-filter: blur(20px);
+  color: var(--primary);
+  border: 2px solid var(--primary);
 }
 
 .cta-secondary:hover {
-  background: rgba(255,255,255,0.2);
-  transform: translateY(-4px);
+  background: rgba(59,130,246,0.15);
+  transform: translateY(-3px);
 }
 
-/* Scroll Indicator */
+/* Scroll Hint */
 .scroll-hint {
   position: absolute;
-  bottom: 3rem;
+  bottom: 2.5rem;
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
@@ -145,7 +146,7 @@ body {
   display: block;
   width: 2px;
   height: 40px;
-  background: rgba(255,255,255,0.6);
+  background: var(--text-muted);
   border-radius: 2px;
   animation: scrollPulse 2s infinite;
 }
@@ -171,7 +172,7 @@ body {
 }
 
 .quick-link {
-  color: rgba(255,255,255,0.8);
+  color: var(--text-muted);
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
@@ -182,19 +183,19 @@ body {
 }
 
 .quick-link:hover {
-  color: white;
-  background: rgba(255,255,255,0.15);
+  color: var(--text-light);
+  background: rgba(255,255,255,0.1);
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .quick-links { 
     position: static; 
     justify-content: center; 
-    margin-top: 2rem; 
+    margin-top: 1.5rem; 
   }
   
   .cta-group { flex-direction: column; align-items: center; gap: 1rem; }
-  
   .scroll-hint { display: none; }
 }
 </style>
@@ -208,12 +209,14 @@ body {
   
   <div class="hero-content">
     <h1>Lucy Nyambura</h1>
-    <h2 class="hero-subtitle">Network Engineer • Cloud • DevOps</h2>
-    <p class="hero-tagline">Automating ISP networks | Building secure cloud infrastructure | Delivering scalable solutions</p>
+    <h2 class="hero-subtitle">Network & Cloud Engineer • DevOps Enthusiast</h2>
+    <p class="hero-tagline">
+      Crafting reliable networks, automating cloud workflows, and delivering seamless digital experiences. 💡 Curious minds, let's explore together!
+    </p>
     
   <div class="cta-group">
-    <a href="/projects" class="cta-btn cta-primary">See My Work</a>
-    <a href="/contact" class="cta-btn cta-secondary">Let's Talk</a>
+    <a href="/projects" class="cta-btn cta-primary">Peek at My Work</a>
+    <a href="/contact" class="cta-btn cta-secondary">Say Hello</a>
   </div>
   </div>
   
