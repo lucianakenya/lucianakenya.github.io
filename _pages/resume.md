@@ -82,9 +82,6 @@ classes: wide
 <style>
 :root {
   --accent: #007acc;
-  --accent-soft: rgba(0, 122, 204, 0.08);
-  --text-dark: #1f2933;
-  --text-muted: #6b7280;
 }
 
 /* HERO */
@@ -99,10 +96,11 @@ classes: wide
 }
 
 .subtitle {
-  color: var(--text-muted);
+  opacity: 0.8; /* works in both dark and light */
   margin-bottom: 1.2rem;
 }
 
+/* BUTTON */
 .btn--resume {
   display: inline-block;
   padding: 0.65rem 1.4rem;
@@ -116,18 +114,18 @@ classes: wide
 
 .btn--resume:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 122, 204, 0.25);
+  box-shadow: 0 6px 18px rgba(0, 122, 204, 0.4);
 }
 
 /* DIVIDER */
 .divider {
   border: none;
   height: 1px;
-  background: #e5e7eb;
+  background: rgba(255,255,255,0.15); /* adapts better in dark */
   margin: 2rem 0;
 }
 
-/* SECTIONS */
+/* SECTION SPACING */
 .resume-section {
   margin-bottom: 3rem;
 }
@@ -138,6 +136,7 @@ classes: wide
   position: relative;
 }
 
+/* Accent underline */
 .resume-section h2::after {
   content: "";
   width: 40px;
@@ -152,14 +151,13 @@ classes: wide
 .summary {
   max-width: 750px;
   line-height: 1.7;
-  color: var(--text-dark);
 }
 
-/* TIMELINE STYLE */
+/* TIMELINE */
 .timeline-item {
   margin-bottom: 2rem;
   padding-left: 1rem;
-  border-left: 3px solid var(--accent-soft);
+  border-left: 3px solid rgba(0, 122, 204, 0.5);
 }
 
 .timeline-item h3 {
@@ -168,12 +166,12 @@ classes: wide
 
 .company {
   font-size: 0.9rem;
-  color: var(--text-muted);
+  opacity: 0.7;
   display: block;
   margin-bottom: 0.5rem;
 }
 
-/* SKILLS */
+/* SKILLS GRID */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -186,8 +184,8 @@ classes: wide
 }
 
 .skills-grid p {
-  color: var(--text-muted);
   margin: 0;
+  opacity: 0.8;
 }
 
 /* MOBILE */
