@@ -11,16 +11,15 @@ classes: wide
   --primary: #2563eb;
   --accent: #3b82f6;
 
-  /* Light Mode */
   --bg-page: #f8fafc;
   --card-bg: #ffffff;
   --text-primary: #111827;
   --text-secondary: #4b5563;
   --border: #e5e7eb;
+  --shadow: 0 10px 40px rgba(0,0,0,0.08);
   --shadow-hover: 0 20px 60px rgba(0,0,0,0.12);
 }
 
-/* 🌙 Dark Mode */
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-page: #0f172a;
@@ -28,53 +27,40 @@ classes: wide
     --text-primary: #f1f5f9;
     --text-secondary: #cbd5e1;
     --border: #334155;
-    --shadow-hover: 0 20px 60px rgba(0,0,0,0.6);
+    --shadow: 0 10px 40px rgba(0,0,0,0.5);
+    --shadow-hover: 0 20px 60px rgba(0,0,0,0.7);
   }
 }
 
-body {
-  background: var(--bg-page);
-}
+body { background: var(--bg-page); font-family: system-ui, sans-serif; margin:0; padding:0; }
 
 /* HERO */
 .projects-hero {
   text-align: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
+  padding: 3rem 2rem;
   border-radius: 24px;
-  color: white;
-  margin: 0 -2rem 4rem;
 }
+.projects-hero h1 { font-size: 2.5rem; margin-bottom: 0.8rem; }
+.projects-hero p { font-size: 1.1rem; color: var(--text-secondary); }
 
-.projects-hero h1 {
-  font-size: 2.6rem;
-  margin-bottom: 1rem;
-}
-
-.projects-hero p {
-  font-size: 1.15rem;
-  opacity: 0.95;
-}
-
-/* TABS */
+/* CATEGORY TABS */
 .category-tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
   justify-content: center;
-  margin-bottom: 3rem;
+  gap: 1rem;
+  margin: 2rem 0;
 }
-
 .category-tab {
   background: var(--card-bg);
   color: var(--text-secondary);
-  padding: 0.7rem 1.4rem;
+  padding: 0.6rem 1.2rem;
   border: 1px solid var(--border);
   border-radius: 40px;
   cursor: pointer;
-  transition: 0.3s ease;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
-
 .category-tab.active,
 .category-tab:hover {
   background: var(--primary);
@@ -82,84 +68,71 @@ body {
   border-color: var(--primary);
 }
 
-/* GRID */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
+/* CAROUSEL */
+.carousel-wrapper {
+  position: relative;
+  margin: 2rem 0 4rem;
+  overflow: hidden;
 }
-
-/* CARD */
+.project-carousel {
+  display: flex;
+  gap: 1.5rem;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
 .project-card {
+  flex: 0 0 320px;
   background: var(--card-bg);
-  border-radius: 18px;
-  padding: 2rem;
+  border-radius: 20px;
+  padding: 1.5rem;
   border: 1px solid var(--border);
-  transition: 0.3s ease;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-hover);
-  border-color: var(--primary);
-}
-
-.project-icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.project-card h3 {
-  color: var(--text-primary);
-  margin-bottom: 0.8rem;
-}
-
-.project-card p {
-  color: var(--text-secondary);
-  line-height: 1.6;
-  font-size: 0.95rem;
-}
-
-/* BUTTON */
+.project-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+.project-card h3 { margin: 0.5rem 0; color: var(--text-primary); }
+.project-card p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.4; }
 .project-link {
+  margin-top: 1rem;
   display: inline-block;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
+  padding: 0.5rem 1rem;
+  background: var(--primary);
   color: white;
-  padding: 0.6rem 1.2rem;
   border-radius: 10px;
   text-decoration: none;
-  font-weight: 600;
   font-size: 0.9rem;
-  margin-top: 1rem;
 }
+.project-link:hover { opacity: 0.9; }
 
-.project-link:hover {
-  opacity: 0.9;
-  color: white;
-  text-decoration: none;
+/* Carousel Arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.1);
+  border: none;
+  font-size: 2rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
 }
+.carousel-arrow.left { left: 0.5rem; }
+.carousel-arrow.right { right: 0.5rem; }
 
-/* CATEGORY STRIP */
-.category-networking { border-left: 4px solid #10b981; }
-.category-cloud { border-left: 4px solid #f59e0b; }
-.category-devops { border-left: 4px solid #ef4444; }
-.category-other { border-left: 4px solid #8b5cf6; }
-
+/* Responsive */
 @media (max-width: 768px) {
-  .projects-hero {
-    margin: 0 -1rem 3rem;
-    padding: 3rem 1.5rem;
-  }
+  .project-card { flex: 0 0 260px; }
 }
 </style>
 
 <div class="projects-hero">
   <h1>🚀 My Projects</h1>
-  <p>Networking automation, cloud architecture, and DevOps solutions built in real-world environments</p>
+  <p>Networking, cloud infrastructure, and DevOps solutions I've built</p>
 </div>
 
 <div class="category-tabs">
@@ -169,96 +142,78 @@ body {
   <button class="category-tab" data-category="devops">DevOps</button>
 </div>
 
-<div class="project-grid">
-
-  <!-- Networking -->
-  <div class="project-card category-networking" data-category="networking">
-    <div>
-      <span class="project-icon">📡</span>
-      <h3>Nokia ONT Auto-Provisioning</h3>
-      <p>Bash automation for Wi-Fi configuration, VLAN assignment, serial validation, and structured activity logging across ISP environments.</p>
+<div class="carousel-wrapper">
+  <button class="carousel-arrow left">&#10094;</button>
+  <div class="project-carousel" id="projectCarousel">
+    <!-- Networking -->
+    <div class="project-card" data-category="networking">
+      <h3>Nokia ONT Provisioning</h3>
+      <p>Bash script to automate Wi-Fi setup, serial validation, VLAN assignment, and activity logging.</p>
+      <a href="https://github.com/lucianakenya/nokia_autoprovisioning" target="_blank" class="project-link">View Project</a>
     </div>
-    <a href="https://github.com/lucianakenya/nokia_autoprovisioning" target="_blank" class="project-link">View Code →</a>
-  </div>
-
-  <div class="project-card category-networking" data-category="networking">
-    <div>
-      <span class="project-icon">🌐</span>
-      <h3>VSOL ONT Provisioning Tool</h3>
-      <p>Python SSH automation for TR-069 configuration across VSOL OLTs with secure credential handling and bulk operations.</p>
+    <div class="project-card" data-category="networking">
+      <h3>VSOL ONT Provisioning</h3>
+      <p>Python tool for SSH-based TR-069 configuration across VSOL OLTs with secure credential handling.</p>
+      <a href="https://github.com/lucianakenya/vsol_provisioning_script" target="_blank" class="project-link">View Project</a>
     </div>
-    <a href="https://github.com/lucianakenya/vsol_provisioning_script" target="_blank" class="project-link">View Code →</a>
-  </div>
-
-  <div class="project-card category-networking" data-category="networking">
-    <div>
-      <span class="project-icon">📊</span>
-      <h3>Power Levels Audit Tool</h3>
-      <p>SSH-based ONT diagnostics tool that parses output with Pandas and exports structured Excel reports for analysis.</p>
+    <div class="project-card" data-category="networking">
+      <h3>TR-069 Remote Configurator</h3>
+      <p>Python script to remotely apply ACS settings on Nokia/VSOL devices with reachability checks.</p>
+      <a href="https://github.com/lucianakenya/configuring_TR-069" target="_blank" class="project-link">View Project</a>
     </div>
-    <a href="https://github.com/lucianakenya/Power_levels_audit" target="_blank" class="project-link">View Code →</a>
-  </div>
 
-  <!-- Cloud -->
-  <div class="project-card category-cloud" data-category="cloud">
-    <div>
-      <span class="project-icon">☁️</span>
-      <h3>Linux EC2 Deployment</h3>
-      <p>Provisioned and secured EC2 instances with IAM roles, security groups, and system hardening best practices.</p>
+    <!-- Cloud -->
+    <div class="project-card" data-category="cloud">
+      <h3>Linux EC2 Setup</h3>
+      <p>Provisioned a Linux-based EC2 instance on AWS with secure access and basic configuration.</p>
+      <a href="https://medium.com/@nyamburalucy678/launching-an-ec2-instance-19b86f6b4b5b" target="_blank" class="project-link">View Project</a>
     </div>
-    <a href="https://medium.com/@nyamburalucy678/launching-an-ec2-instance-19b86f6b4b5b" target="_blank" class="project-link">Read Article →</a>
-  </div>
-
-  <div class="project-card category-cloud" data-category="cloud">
-    <div>
-      <span class="project-icon">🌍</span>
-      <h3>Amazon VPC Architecture</h3>
-      <p>Designed public/private subnet architecture with routing tables, internet gateways, and security controls.</p>
+    <div class="project-card" data-category="cloud">
+      <h3>Amazon VPC Networking</h3>
+      <p>Created networking resources in an Amazon VPC including subnets, route tables, and gateways.</p>
+      <a href="https://medium.com/@nyamburalucy678/creating-networking-resources-in-an-amazon-vpc-5f3df03a03f4" target="_blank" class="project-link">View Project</a>
     </div>
-    <a href="https://medium.com/@nyamburalucy678/creating-networking-resources-in-an-amazon-vpc-5f3df03a03f4" target="_blank" class="project-link">Read Article →</a>
-  </div>
 
-  <!-- DevOps -->
-  <div class="project-card category-devops" data-category="devops">
-    <div>
-      <span class="project-icon">🩺</span>
+    <!-- DevOps -->
+    <div class="project-card" data-category="devops">
       <h3>Automated EC2 Health Checks</h3>
-      <p>Ansible playbook for monitoring EC2 CPU, memory, and disk usage with AWS SES alert notifications.</p>
+      <p>Ansible playbook for EC2 monitoring with AWS SES alerts and auto-recovery.</p>
+      <a href="https://github.com/lucianakenya/ec2-health-checks" target="_blank" class="project-link">View Project</a>
     </div>
-    <a href="https://medium.com/@nyamburalucy678/how-i-automated-ec2-health-checks-and-email-alerts-with-ansible-and-aws-ses-0f1d4d3c6a49" target="_blank" class="project-link">Read Article →</a>
-  </div>
-
-  <div class="project-card category-devops" data-category="devops">
-    <div>
-      <span class="project-icon">🔄</span>
-      <h3>Terraform EC2 Provisioning</h3>
-      <p>Infrastructure as Code solution for reproducible EC2 deployments using modular Terraform configurations.</p>
+    <div class="project-card" data-category="devops">
+      <h3>Terraform Provisioning</h3>
+      <p>Infrastructure as Code for reproducible AWS EC2 deployments with remote state management.</p>
+      <a href="https://github.com/lucianakenya/terraform-ec2" target="_blank" class="project-link">View Project</a>
     </div>
-    <a href="https://medium.com/@nyamburalucy678/automating-ec2-provisioning-with-terraform-installed-on-ec2-a-step-by-step-guide-c655a7794921" target="_blank" class="project-link">Read Article →</a>
   </div>
-
+  <button class="carousel-arrow right">&#10095;</button>
 </div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const tabs = document.querySelectorAll('.category-tab');
   const projects = document.querySelectorAll('.project-card');
+  const carousel = document.getElementById('projectCarousel');
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
-
       const category = tab.dataset.category;
 
-      projects.forEach(project => {
-        if (category === 'all' || project.dataset.category === category) {
-          project.style.display = 'flex';
+      projects.forEach(p => {
+        if (category === 'all' || p.dataset.category === category) {
+          p.style.display = 'flex';
         } else {
-          project.style.display = 'none';
+          p.style.display = 'none';
         }
       });
     });
   });
+
+  const leftArrow = document.querySelector('.carousel-arrow.left');
+  const rightArrow = document.querySelector('.carousel-arrow.right');
+  leftArrow.addEventListener('click', () => { carousel.scrollBy({ left: -350, behavior: 'smooth' }); });
+  rightArrow.addEventListener('click', () => { carousel.scrollBy({ left: 350, behavior: 'smooth' }); });
 });
 </script>
