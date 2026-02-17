@@ -11,7 +11,7 @@ classes: wide
   <p class="subtitle">
     Network & Cloud Engineer focused on automation, infrastructure, and scalable systems.
   </p>
-  <a href="{{ '/assets/resume.pdf' | relative_url }}" 
+  <a href="{{ '/assets/resume.pdf.pdf' | relative_url }}" 
      class="btn--resume" 
      target="_blank" 
      download>
