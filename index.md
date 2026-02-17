@@ -6,49 +6,36 @@ classes: wide
 ---
 
 <style>
-:root {
-  --primary: #667eea;
-  --accent: #764ba2;
-  --bg-page: #fafafa;
-  --card-bg: #ffffff;
-  --text-primary: #222;
-  --text-secondary: #555;
-  --border: #e0e0e0;
-  --shadow: 0 8px 25px rgba(0,0,0,0.08);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-page: #0f172a;
-    --card-bg: #1e293b;
-    --text-primary: #f1f5f9;
-    --text-secondary: #cbd5e1;
-    --border: #334155;
-    --shadow: 0 8px 25px rgba(0,0,0,0.5);
-  }
-}
-
+/* Global Styles */
 body {
-  background: var(--bg-page);
-  color: var(--text-primary);
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
+  background: #f5f7fa;
+  color: #222;
   margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
+  line-height: 1.6;
 }
 
-/* HERO */
+/* Hero Section */
 .hero {
-  text-align: center;
-  padding: 6rem 1rem 4rem 1rem;
-  background: var(--card-bg);
-  color: var(--text-primary);
-  border-radius: 16px;
-  max-width: 900px;
-  margin: 0 auto 4rem auto;
-  box-shadow: var(--shadow);
   position: relative;
+  text-align: center;
+  padding: 8rem 1rem 6rem 1rem;
+  background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+  color: white;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4); /* dark overlay to enhance readability */
+  z-index: 0;
+}
+
+.hero h1, .hero h2, .hero p {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
@@ -57,190 +44,198 @@ body {
 }
 
 .hero h2 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
   opacity: 0.9;
-  margin-bottom: 1.2rem;
 }
 
 .hero p {
   font-size: 1.1rem;
-  max-width: 650px;
+  max-width: 600px;
   margin: 0 auto;
   opacity: 0.85;
 }
 
-/* SKILLS PREVIEW */
-.skills-preview {
-  max-width: 1000px;
-  margin: 0 auto 4rem auto;
-  padding: 0 1rem;
+/* Floating Accent Circles */
+.hero .accent-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: #667eea33;
+  z-index: 0;
+}
+.hero .circle1 { width: 200px; height: 200px; top: 30px; left: -50px; }
+.hero .circle2 { width: 150px; height: 150px; bottom: 50px; right: -30px; }
+
+/* Skills Section */
+#skills {
+  text-align: center;
+  padding: 4rem 1rem;
 }
 
-.skills-preview h2 {
-  text-align: center;
+#skills h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: var(--primary);
+  color: #333;
 }
 
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.skill-card {
-  background: var(--card-bg);
-  padding: 1.5rem;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
-}
-
-.skill-card i {
-  font-size: 2rem;
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-}
-
-.skill-card p {
-  margin: 0;
+.skills-grid li {
+  list-style: none;
+  background: #fff;
+  padding: 0.8rem 1rem;
+  border-radius: 40px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  font-weight: 500;
   font-size: 0.95rem;
-  color: var(--text-secondary);
+  gap: 0.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* PROJECTS PREVIEW */
-.projects-preview {
-  max-width: 1000px;
-  margin: 0 auto 4rem auto;
-  padding: 0 1rem;
+.skills-grid li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
 }
 
-.projects-preview h2 {
+/* Projects Section Preview */
+#projects-preview {
   text-align: center;
+  padding: 4rem 1rem;
+}
+
+#projects-preview h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: var(--primary);
 }
 
 .project-card {
-  background: var(--card-bg);
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
   padding: 1.5rem;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
+  margin: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.12);
 }
 
 .project-card h3 {
-  margin-bottom: 0.6rem;
-  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  color: #333;
 }
 
 .project-card p {
-  color: var(--text-secondary);
   font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
 }
 
-.cta-button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.8rem 2rem;
-  background: var(--primary);
+.project-link {
+  text-decoration: none;
+  color: #667eea;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.project-link:hover {
+  color: #764ba2;
+}
+
+/* Contact Section CTA */
+#contact-cta {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+#contact-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+#contact-cta p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+#contact-cta a {
+  background: #667eea;
   color: white;
-  border-radius: 12px;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: background 0.3s, transform 0.3s;
 }
 
-.cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+#contact-cta a:hover {
+  background: #764ba2;
+  transform: translateY(-3px);
 }
 
-/* FOOTNOTE */
-.page-footnote {
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin-top: 6rem;
-  padding: 1rem;
-  border-top: 1px solid var(--border);
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.3rem; }
+  .hero h2 { font-size: 1.3rem; }
+  .skills-grid { flex-direction: column; align-items: center; }
+  .project-card { margin: 1rem auto; width: 90%; }
 }
 </style>
 
+<!-- Hero -->
 <div class="hero">
+  <div class="accent-circle circle1"></div>
+  <div class="accent-circle circle2"></div>
   <h1>🌟 Lucy Nyambura</h1>
   <h2>Network Engineer • DevOps • Cloud Infrastructure</h2>
   <p>4+ years building secure networks, automating infrastructure, and deploying scalable cloud solutions</p>
 </div>
 
-<section class="skills-preview" id="skills">
-  <h2>Technical Skills & Expertise</h2>
-  <div class="skills-grid">
-    <div class="skill-card">
-      <i class="fas fa-network-wired"></i>
-      <p>IP Routing: OSPF, BGP</p>
-    </div>
-    <div class="skill-card">
-      <i class="fas fa-cloud"></i>
-      <p>AWS Cloud: EC2, VPC, IAM, S3</p>
-    </div>
-    <div class="skill-card">
-      <i class="fas fa-code"></i>
-      <p>Python & Bash Scripting</p>
-    </div>
-    <div class="skill-card">
-      <i class="fas fa-cogs"></i>
-      <p>Terraform & Cloud Automation</p>
-    </div>
-    <div class="skill-card">
-      <i class="fas fa-shield-alt"></i>
-      <p>Cloud Security & Compliance</p>
-    </div>
-    <div class="skill-card">
-      <i class="fas fa-chart-line"></i>
-      <p>Capacity Planning & Service Reliability</p>
-    </div>
-  </div>
+<!-- Skills -->
+<section id="skills">
+  <h2>Technical Expertise</h2>
+  <ul class="skills-grid">
+    <li><i class="fas fa-network-wired"></i> IP Routing: OSPF, BGP</li>
+    <li><i class="fas fa-network-wired"></i> MPLS, fault troubleshooting</li>
+    <li><i class="fas fa-cloud"></i> AWS: EC2, VPC, IAM, S3</li>
+    <li><i class="fas fa-code"></i> Python, Bash scripting</li>
+    <li><i class="fas fa-cogs"></i> Terraform & CloudFormation</li>
+    <li><i class="fas fa-shield-alt"></i> Cloud security & compliance</li>
+  </ul>
 </section>
 
-<section class="projects-preview" id="projects">
+<!-- Projects Preview -->
+<section id="projects-preview">
   <h2>Featured Projects</h2>
-  <p style="text-align:center; color:var(--text-secondary); max-width:700px; margin:0 auto 2rem;">
-    Highlights from my work in networking, cloud infrastructure, and DevOps automation.
-  </p>
-  <div class="skills-grid">
-    <div class="project-card">
-      <h3>Nokia ONT Provisioning</h3>
-      <p>Bash script automating Wi-Fi setup and VLAN assignments</p>
-    </div>
-    <div class="project-card">
-      <h3>Linux EC2 Setup</h3>
-      <p>Provisioned EC2 instances and configured networking securely</p>
-    </div>
-    <div class="project-card">
-      <h3>CI/CD Pipeline</h3>
-      <p>Built full DevOps workflow with Python & GitHub Actions</p>
-    </div>
+  <div class="project-card">
+    <h3>Nokia ONT Provisioning</h3>
+    <p>Bash script to automate Wi-Fi setup, serial validation, VLAN assignment, and activity logging.</p>
+    <a href="https://github.com/lucianakenya/nokia_autoprovisioning" class="project-link" target="_blank">View Project</a>
   </div>
-  <p style="text-align:center; margin-top:1rem;">
-    <a href="/projects/" class="cta-button">View All Projects</a>
-  </p>
+  <div class="project-card">
+    <h3>Linux EC2 Setup</h3>
+    <p>Provisioned a Linux-based EC2 instance on AWS with secure access and configuration.</p>
+    <a href="https://medium.com/@nyamburalucy678/launching-an-ec2-instance-19b86f6b4b5b" class="project-link" target="_blank">View Project</a>
+  </div>
+  <p style="margin-top: 1.5rem;"><a href="/projects" class="project-link">See all projects →</a></p>
 </section>
 
-<div class="page-footnote">
-  &copy; {{ site.time | date: "%Y" }} Lucy Nyambura • Showcasing professional expertise in networking, cloud, and DevOps
-</div>
+<!-- Contact CTA -->
+<section id="contact-cta">
+  <h2>Let's Collaborate!</h2>
+  <p>Reach out for network engineering, DevOps automation, or cloud infrastructure projects</p>
+  <a href="/contact">Contact Me</a>
+</section>
+
