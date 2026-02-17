@@ -162,29 +162,29 @@ body { background: var(--bg-page); font-family: system-ui, sans-serif; margin:0;
       <a href="https://github.com/lucianakenya/configuring_TR-069" target="_blank" class="project-link">View Project</a>
     </div>
 
-    <!-- Cloud -->
-    <div class="project-card" data-category="cloud">
-      <h3>Linux EC2 Setup</h3>
-      <p>Provisioned a Linux-based EC2 instance on AWS with secure access and basic configuration.</p>
-      <a href="https://medium.com/@nyamburalucy678/launching-an-ec2-instance-19b86f6b4b5b" target="_blank" class="project-link">View Project</a>
-    </div>
-    <div class="project-card" data-category="cloud">
-      <h3>Amazon VPC Networking</h3>
-      <p>Created networking resources in an Amazon VPC including subnets, route tables, and gateways.</p>
-      <a href="https://medium.com/@nyamburalucy678/creating-networking-resources-in-an-amazon-vpc-5f3df03a03f4" target="_blank" class="project-link">View Project</a>
-    </div>
+  <!-- Cloud -->
+  <div class="project-card" data-category="cloud">
+    <h3>Linux EC2 Setup</h3>
+    <p>Provisioned a Linux-based EC2 instance on AWS with secure access and basic configuration.</p>
+    <a href="https://medium.com/@nyamburalucy678/launching-an-ec2-instance-19b86f6b4b5b" target="_blank" class="project-link">View Project</a>
+  </div>
+  <div class="project-card" data-category="cloud">
+    <h3>Amazon VPC Networking</h3>
+    <p>Created networking resources in an Amazon VPC including subnets, route tables, and gateways.</p>
+    <a href="https://medium.com/@nyamburalucy678/creating-networking-resources-in-an-amazon-vpc-5f3df03a03f4" target="_blank" class="project-link">View Project</a>
+  </div>
 
-    <!-- DevOps -->
-    <div class="project-card" data-category="devops">
-      <h3>Automated EC2 Health Checks</h3>
-      <p>Ansible playbook for EC2 monitoring with AWS SES alerts and auto-recovery.</p>
-      <a href="https://github.com/lucianakenya/ec2-health-checks" target="_blank" class="project-link">View Project</a>
-    </div>
-    <div class="project-card" data-category="devops">
-      <h3>Terraform Provisioning</h3>
-      <p>Infrastructure as Code for reproducible AWS EC2 deployments with remote state management.</p>
-      <a href="https://github.com/lucianakenya/terraform-ec2" target="_blank" class="project-link">View Project</a>
-    </div>
+  <!-- DevOps -->
+  <div class="project-card" data-category="devops">
+    <h3>Automated EC2 Health Checks</h3>
+    <p>Ansible playbook for EC2 monitoring with AWS SES alerts and auto-recovery.</p>
+    <a href="https://github.com/lucianakenya/ec2-health-checks" target="_blank" class="project-link">View Project</a>
+  </div>
+  <div class="project-card" data-category="devops">
+    <h3>Terraform Provisioning</h3>
+    <p>Infrastructure as Code for reproducible AWS EC2 deployments with remote state management.</p>
+    <a href="https://github.com/lucianakenya/terraform-ec2" target="_blank" class="project-link">View Project</a>
+  </div>
   </div>
   <button class="carousel-arrow right">&#10095;</button>
 </div>
