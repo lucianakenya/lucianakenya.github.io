@@ -14,7 +14,7 @@ classes: wide
   --text-primary: #222;
   --text-secondary: #555;
   --border: #e0e0e0;
-  --shadow: 0 8px 30px rgba(0,0,0,0.08);
+  --shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,7 +24,7 @@ classes: wide
     --text-primary: #f1f5f9;
     --text-secondary: #cbd5e1;
     --border: #334155;
-    --shadow: 0 8px 30px rgba(0,0,0,0.5);
+    --shadow: 0 8px 25px rgba(0,0,0,0.5);
   }
 }
 
@@ -38,19 +38,22 @@ body {
   scroll-behavior: smooth;
 }
 
+/* HERO */
 .hero {
   text-align: center;
-  padding: 8rem 1rem 4rem 1rem;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  color: white;
-  border-radius: 12px;
+  padding: 6rem 1rem 4rem 1rem;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border-radius: 16px;
   max-width: 900px;
   margin: 0 auto 4rem auto;
+  box-shadow: var(--shadow);
+  position: relative;
 }
 
 .hero h1 {
   font-size: 3rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
 }
 
 .hero h2 {
@@ -61,12 +64,12 @@ body {
 
 .hero p {
   font-size: 1.1rem;
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
   opacity: 0.85;
 }
 
-/* Skills Preview Section */
+/* SKILLS PREVIEW */
 .skills-preview {
   max-width: 1000px;
   margin: 0 auto 4rem auto;
@@ -89,7 +92,7 @@ body {
 .skill-card {
   background: var(--card-bg);
   padding: 1.5rem;
-  border-radius: 12px;
+  border-radius: 16px;
   text-align: center;
   box-shadow: var(--shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -112,7 +115,7 @@ body {
   color: var(--text-secondary);
 }
 
-/* Projects Preview Section */
+/* PROJECTS PREVIEW */
 .projects-preview {
   max-width: 1000px;
   margin: 0 auto 4rem auto;
@@ -126,7 +129,48 @@ body {
   color: var(--primary);
 }
 
-/* Footnote */
+.project-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+.project-card h3 {
+  margin-bottom: 0.6rem;
+  color: var(--text-primary);
+}
+
+.project-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  background: var(--primary);
+  color: white;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* FOOTNOTE */
 .page-footnote {
   text-align: center;
   font-size: 0.9rem;
@@ -176,17 +220,20 @@ body {
 <section class="projects-preview" id="projects">
   <h2>Featured Projects</h2>
   <p style="text-align:center; color:var(--text-secondary); max-width:700px; margin:0 auto 2rem;">
-    Some highlights from my work in networking, cloud infrastructure, and DevOps automation.
+    Highlights from my work in networking, cloud infrastructure, and DevOps automation.
   </p>
   <div class="skills-grid">
-    <div class="skill-card">
-      <p><strong>Nokia ONT Provisioning</strong><br>Bash script automating Wi-Fi setup and VLAN assignments</p>
+    <div class="project-card">
+      <h3>Nokia ONT Provisioning</h3>
+      <p>Bash script automating Wi-Fi setup and VLAN assignments</p>
     </div>
-    <div class="skill-card">
-      <p><strong>Linux EC2 Setup</strong><br>Provisioned EC2 instances and configured networking securely</p>
+    <div class="project-card">
+      <h3>Linux EC2 Setup</h3>
+      <p>Provisioned EC2 instances and configured networking securely</p>
     </div>
-    <div class="skill-card">
-      <p><strong>CI/CD Pipeline</strong><br>Built full DevOps workflow with Python & GitHub Actions</p>
+    <div class="project-card">
+      <h3>CI/CD Pipeline</h3>
+      <p>Built full DevOps workflow with Python & GitHub Actions</p>
     </div>
   </div>
   <p style="text-align:center; margin-top:1rem;">
@@ -195,5 +242,5 @@ body {
 </section>
 
 <div class="page-footnote">
-  &copy; {{ site.time | date: "%Y" }} Lucy Nyambura • All pages maintain a clean, responsive, and dark-mode-ready style
+  &copy; {{ site.time | date: "%Y" }} Lucy Nyambura • Showcasing professional expertise in networking, cloud, and DevOps
 </div>
