@@ -189,18 +189,13 @@ body {
   .scroll-hint { display: none; }
 }
 </style>
-
-<div class="hero">
-  <div class="quick-links">
-    <a href="/resume" class="quick-link">Resume</a>
-    <a href="/projects" class="quick-link">Projects</a>
-    <a href="/contact" class="quick-link">Contact</a>
-  </div>
   
   <div class="hero-content">
-    <h1>Hi, I'm Lucy</h1>
+    <h3>Hi, I'm Lucy</h3>
     <p class="hero-text">
-      A Network & Cloud Engineer with 4+ years experience building secure networks, automating infrastructure, and delivering scalable cloud solutions. I specialize in DevOps, hybrid cloud environments, and network optimization.
+      I am a Network Engineer with over 4 years of experience designing, securing, and optimizing enterprise infrastructure. Specializing in Cisco and Junos routing platforms, network automation, and cloud computing, I have a proven track record of reducing downtime by 47% through proactive network optimization. My expertise covers a broad range of tools, scripting languages, and automation frameworks to deliver resilient, high-performance network solutions tailored for hybrid cloud and on-premises environments. From provisioning Optical Network Terminals (ONTs) and configuring complex cloud networks to restoring service reliability, I approach each challenge with precision, adaptability, and a focus on operational excellence.
+
+My expertise spans tooling, scripting, and automation to deliver resilient, high-performance network solutions across hybrid environments. Whether it's provisioning ONTs, configuring cloud networks, or restoring service reliability, I bring precision and adaptability to every challenge.
     </p>
     
   <div class="cta-group">
