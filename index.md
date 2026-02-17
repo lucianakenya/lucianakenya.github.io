@@ -189,11 +189,12 @@ body {
   .scroll-hint { display: none; }
 }
 </style>
-  
+
+<div class="hero">
   <div class="hero-content">
     <h2>Welcome to My Portfolio</h2>
     <p class="hero-text">
-      Hello,my name is Lucy Nyambura ,a Network Engineer with 4+ years designing, securing, and optimizing enterprise networks. Expert in Cisco/Junos routing, automation, and cloud tech—cut downtime 47% via proactive tweaks.Skilled in tools, scripts, and frameworks for robust hybrid/on-prem solutions, from ONT provisioning and cloud configs to service recovery with precision and agility.
+      Hello, my name is Lucy Nyambura, a Network Engineer with 4+ years designing, securing, and optimizing enterprise networks. Expert in Cisco/Junos routing, automation, and cloud tech—cut downtime 47% via proactive tweaks. Skilled in tools, scripts, and frameworks for robust hybrid/on-prem solutions, from ONT provisioning and cloud configs to service recovery with precision and agility.
     </p>
     
   <div class="cta-group">
@@ -201,7 +202,7 @@ body {
     <a href="/contact" class="cta-btn cta-secondary">Let's Talk</a>
   </div>
   </div>
-  
+
   <div class="scroll-hint">
     <span></span>
   </div>
