@@ -224,7 +224,7 @@ body {
   <div class="hero-content">
 
 
-<span class="hero-eyebrow">Network Engineer &amp; DevOps</span>
+<span class="hero-eyebrow">Network Engineer &amp; Cloud Solutions</span>
 
 <h1>Lucy Nyambura</h1>
 
