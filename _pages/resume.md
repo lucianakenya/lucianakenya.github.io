@@ -24,9 +24,9 @@ classes: wide
 <section class="resume-section">
   <h2>Professional Summary</h2>
   <p class="summary">
-    Results-driven <strong>Network & Cloud Engineer</strong> with 3+ years of experience in 
+    Results-driven <strong>Network & Cloud Engineer</strong> with 4+ years of experience in 
     network automation, cloud infrastructure, DevOps, and IT operations. 
-    Experienced in <strong>Python, Terraform, AWS, Azure, Linux, and CI/CD pipelines</strong>, 
+    Experienced in <strong>Python, Terraform, AWS, Azure, Linux and CI/CD pipelines</strong>, 
     building secure and scalable systems.
   </p>
 </section>
