@@ -10,150 +10,138 @@ classes: wide
 :root {
   --primary: #1e40af;
   --accent: #3b82f6;
-  --bg-light: #f8fafc;
-  --bg-dark: #0f172a;
-  --card-light: #ffffff;
-  --card-dark: #1e293b;
-  --text-light: #1f2937;
-  --text-dark: #f1f5f9;
-  --text-secondary-light: #6b7280;
-  --text-secondary-dark: #cbd5e1;
-  --border-light: #e2e8f0;
-  --border-dark: #334155;
-  --shadow-light: 0 10px 40px rgba(0,0,0,0.08);
-  --shadow-dark: 0 10px 40px rgba(0,0,0,0.5);
-  --shadow-hover-light: 0 20px 60px rgba(0,0,0,0.12);
-  --shadow-hover-dark: 0 20px 60px rgba(0,0,0,0.7);
-}
-
-body {
-  background: var(--bg-light);
-  font-family: system-ui, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: var(--text-light);
-  transition: all 0.3s ease;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #1f2937;
+  --text-sub: #6b7280;
+  --border: #e2e8f0;
+  --shadow: 0 10px 40px rgba(0,0,0,0.08);
+  --shadow-hover: 0 20px 60px rgba(0,0,0,0.12);
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
-    background: var(--bg-dark);
-    color: var(--text-dark);
+  :root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #f1f5f9;
+    --text-sub: #cbd5e1;
+    --border: #334155;
+    --shadow: 0 10px 40px rgba(0,0,0,0.5);
+    --shadow-hover: 0 20px 60px rgba(0,0,0,0.7);
   }
 }
 
-/* HERO SECTION */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  margin: 0;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-section,
+.contact-grid,
+.form-container {
+  animation: fadeUp 0.5s ease both;
+}
+
+.contact-grid { animation-delay: 0.1s; }
+.form-container { animation-delay: 0.2s; }
+
+/* HERO */
 .hero-section {
   text-align: center;
   padding: 3rem 2rem;
   border-radius: 20px;
-  background: var(--card-light);
-  box-shadow: var(--shadow-light);
+  background: var(--card);
+  box-shadow: var(--shadow);
   margin-bottom: 3rem;
-  transition: all 0.3s ease;
-}
-
-@media (prefers-color-scheme: dark) {
-  .hero-section {
-    background: var(--card-dark);
-    box-shadow: var(--shadow-dark);
-  }
 }
 
 .hero-section h1 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
   color: var(--primary);
 }
 
 .hero-section p {
   font-size: 1.1rem;
-  color: var(--text-secondary-light);
+  color: var(--text-sub);
   max-width: 600px;
   margin: 0 auto;
 }
 
-@media (prefers-color-scheme: dark) {
-  .hero-section p {
-    color: var(--text-secondary-dark);
-  }
-}
-
-/* CONTACT GRID */
+/* GRID */
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
   margin-bottom: 3rem;
 }
 
 .contact-card {
-  background: var(--card-light);
+  background: var(--card);
   padding: 2rem 1.5rem;
   border-radius: 16px;
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border);
   text-align: center;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-@media (prefers-color-scheme: dark) {
-  .contact-card {
-    background: var(--card-dark);
-    border: 1px solid var(--border-dark);
-  }
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-hover-light);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
 }
 
-@media (prefers-color-scheme: dark) {
-  .contact-card:hover {
-    box-shadow: var(--shadow-hover-dark);
-  }
+.contact-card h3 { margin: 0.75rem 0 0.4rem; }
+
+.contact-card a,
+.contact-card p {
+  color: var(--text-sub);
+  font-size: 0.95rem;
+  margin: 0;
+  word-break: break-word;
 }
+
+.contact-card a:hover { color: var(--accent); }
 
 .contact-icon {
-  font-size: 2rem;
-  width: 60px;
-  height: 60px;
+  font-size: 1.5rem;
+  width: 56px;
+  height: 56px;
   border-radius: 12px;
   background: linear-gradient(135deg, var(--primary), var(--accent));
-  color: white;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1rem;
+  margin: 0 auto;
 }
 
 /* FORM */
 .form-container {
-  background: var(--card-light);
+  background: var(--card);
   padding: 2.5rem 2rem;
   border-radius: 20px;
-  border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-light);
-  transition: all 0.3s ease;
-}
-
-@media (prefers-color-scheme: dark) {
-  .form-container {
-    background: var(--card-dark);
-    border: 1px solid var(--border-dark);
-    box-shadow: var(--shadow-dark);
-  }
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
 .form-container h2 {
   text-align: center;
-  margin-bottom: 1.5rem;
-  color: var(--text-light);
+  margin: 0 0 1.5rem;
+  color: var(--text);
 }
 
-@media (prefers-color-scheme: dark) {
-  .form-container h2 { color: var(--text-dark); }
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 .form-group {
@@ -164,29 +152,26 @@ body {
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 1rem 1rem;
-  border: 2px solid var(--border-light);
+  padding: 1rem;
+  border: 2px solid var(--border);
   border-radius: 12px;
   font-size: 1rem;
-  background: var(--bg-light);
-  color: var(--text-light);
-  transition: all 0.3s ease;
+  background: var(--bg);
+  color: var(--text);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  .form-group input,
-  .form-group textarea {
-    background: var(--bg-dark);
-    color: var(--text-dark);
-    border: 2px solid var(--border-dark);
-  }
+.form-group textarea {
+  min-height: 140px;
+  resize: vertical;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 4px rgba(30,64,175,0.15);
+  box-shadow: 0 0 0 4px rgba(30,64,175,0.12);
 }
 
 .form-group label {
@@ -194,58 +179,47 @@ body {
   top: 1rem;
   left: 1rem;
   font-size: 0.9rem;
-  color: var(--text-secondary-light);
+  color: var(--text-sub);
   pointer-events: none;
-  transition: 0.3s ease all;
-}
-
-@media (prefers-color-scheme: dark) {
-  .form-group label { color: var(--text-secondary-dark); }
+  transition: top 0.25s ease, font-size 0.25s ease, color 0.25s ease, background 0.25s ease;
 }
 
 .form-group input:focus + label,
-.form-group input:valid + label,
+.form-group input:not(:placeholder-shown) + label,
 .form-group textarea:focus + label,
-.form-group textarea:valid + label {
-  top: -0.5rem;
-  left: 0.8rem;
-  font-size: 0.75rem;
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -0.55rem;
+  left: 0.75rem;
+  font-size: 0.72rem;
   color: var(--primary);
-  background: var(--card-light);
-  padding: 0 0.2rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  .form-group input:focus + label,
-  .form-group input:valid + label,
-  .form-group textarea:focus + label,
-  .form-group textarea:valid + label {
-    background: var(--card-dark);
-  }
+  background: var(--card);
+  padding: 0 0.25rem;
 }
 
 .submit-button {
   width: 100%;
   padding: 1rem;
   background: linear-gradient(135deg, var(--primary), var(--accent));
-  color: white;
+  color: #fff;
   font-size: 1rem;
   font-weight: 600;
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .submit-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 15px 35px rgba(30,64,175,0.3);
+  box-shadow: 0 12px 30px rgba(30,64,175,0.3);
 }
 
+.submit-button:active { transform: translateY(0); }
+
 /* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero-section h1 { font-size: 2rem; }
-  .contact-grid { grid-template-columns: 1fr; }
+@media (max-width: 640px) {
+  .hero-section h1 { font-size: 1.9rem; }
+  .form-row { grid-template-columns: 1fr; }
 }
 </style>
 
@@ -262,19 +236,16 @@ body {
       <h3>Email</h3>
       <a href="mailto:nyamburalucy678@gmail.com">nyamburalucy678@gmail.com</a>
     </div>
-
     <div class="contact-card">
       <div class="contact-icon">💻</div>
       <h3>GitHub</h3>
-      <a href="https://github.com/lucianakenya/" target="_blank">lucianakenya</a>
+      <a href="https://github.com/lucianakenya/" target="_blank" rel="noopener">lucianakenya</a>
     </div>
-
     <div class="contact-card">
       <div class="contact-icon">💼</div>
       <h3>LinkedIn</h3>
-      <a href="https://www.linkedin.com/in/lucy-nyambura-5704a1232/" target="_blank">Lucy Nyambura</a>
+      <a href="https://www.linkedin.com/in/lucy-nyambura-5704a1232/" target="_blank" rel="noopener">Lucy Nyambura</a>
     </div>
-
     <div class="contact-card">
       <div class="contact-icon">📱</div>
       <h3>Phone</h3>
@@ -283,20 +254,20 @@ body {
   </div>
 
   <div class="form-container">
-    <h2>Send Message</h2>
+    <h2>Send a Message</h2>
     <form action="https://formspree.io/f/mykdjewk" method="POST">
-      <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+      <div class="form-row">
         <div class="form-group">
-          <input type="text" id="name" name="name" required>
+          <input type="text" id="name" name="name" placeholder=" " required>
           <label for="name">Your Name</label>
         </div>
         <div class="form-group">
-          <input type="email" id="email" name="_replyto" required>
+          <input type="email" id="email" name="_replyto" placeholder=" " required>
           <label for="email">Your Email</label>
         </div>
       </div>
       <div class="form-group">
-        <textarea id="message" name="message" required></textarea>
+        <textarea id="message" name="message" placeholder=" " required></textarea>
         <label for="message">Your Message</label>
       </div>
       <button type="submit" class="submit-button">Get In Touch</button>
