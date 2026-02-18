@@ -245,33 +245,108 @@ body {
   </p>
 </section>
 <section id="lab-challenges">
-  <h2 class="section-title">🔬 Lab Challenges & Practical Training</h2>
+  <h2 class="section-title">🔬 Lab Challenges</h2>
+
+  <p style="max-width:900px;margin:0 auto 2rem;">
+    The following lab challenges were completed through structured, hands-on training 
+    on Hack The Box Academy. Each lab involved practical simulation of real-world 
+    cybersecurity scenarios including enumeration, system analysis, vulnerability 
+    identification, and privilege escalation.
+  </p>
 
   <div class="cert-category">
-    <h3>🛡️ Hack The Box Academy</h3>
-    <div class="cert-button-group">
-      <a href="https://academy.hackthebox.com/achievement/badge/b0945e4d-f228-11f0-9254-bea50ffe6cb4" target="_blank" class="cert-button">
-        <i class="fas fa-flask"></i> Linux Fundamentals
-      </a>
-      <a href="https://academy.hackthebox.com/achievement/badge/996b074f-036d-11f1-9254-bea50ffe6cb4" target="_blank" class="cert-button">
-        <i class="fas fa-flask"></i> Network Enumeration with Nmap
-      </a>
-      <a href="https://academy.hackthebox.com/achievement/badge/264e7011-00f0-11f1-9254-bea50ffe6cb4" target="_blank" class="cert-button">
-        <i class="fas fa-flask"></i> Introduction to Networking
-      </a>
-      <a href="https://academy.hackthebox.com/achievement/badge/35a1795e-f12d-11f0-9254-bea50ffe6cb4" target="_blank" class="cert-button">
-        <i class="fas fa-flask"></i> Windows Fundamentals
-      </a>
-      <a href="https://academy.hackthebox.com/achievement/badge/3c16345e-f15e-11f0-9254-bea50ffe6cb4" target="_blank" class="cert-button">
-        <i class="fas fa-flask"></i> Introduction to Web Applications
-      </a>
-      <a href="https://academy.hackthebox.com/achievement/badge/1d7aa8f1-0a49-11f1-9254-bea50ffe6cb4" target="_blank" class="cert-button">
-        <i class="fas fa-flask"></i> Vulnerability Assessment
-      </a>
-    </div>
+    <h3>🛡️ Network Enumeration & Service Analysis</h3>
+
+  <p><strong>Related Modules:</strong></p>
+  <ul>
+    <li><a href="https://academy.hackthebox.com/achievement/badge/996b074f-036d-11f1-9254-bea50ffe6cb4" target="_blank">Network Enumeration with Nmap</a></li>
+    <li><a href="https://academy.hackthebox.com/achievement/badge/264e7011-00f0-11f1-9254-bea50ffe6cb4" target="_blank">Introduction to Networking</a></li>
+  </ul>
+
+  <p><strong>Problem Statement:</strong><br>
+  Perform full reconnaissance on a target system to identify open ports, 
+  running services, and potential vulnerabilities within a controlled lab environment.
+  </p>
+
+  <p><strong>Approach:</strong></p>
+  <ul>
+    <li>Host discovery and TCP port scanning</li>
+    <li>Service version detection and banner grabbing</li>
+    <li>Analysis of exposed services and misconfigurations</li>
+  </ul>
+
+  <p><strong>Tools Used:</strong> Nmap, Netcat, Linux CLI</p>
+
+  <p><strong>Key Lessons Learned:</strong></p>
+  <ul>
+    <li>Thorough enumeration is foundational to security testing</li>
+    <li>Misconfigured services significantly increase attack surface</li>
+    <li>Understanding networking fundamentals improves scan interpretation</li>
+  </ul>
   </div>
 
-  <p class="cert-note">
-    🧪 Continuous hands-on cybersecurity training through real-world lab simulations, network enumeration, vulnerability analysis, and system exploitation.
+
+  <div class="cert-category">
+    <h3>🖥️ Linux & Windows System Security Analysis</h3>
+
+  <p><strong>Related Modules:</strong></p>
+  <ul>
+    <li><a href="https://academy.hackthebox.com/achievement/badge/b0945e4d-f228-11f0-9254-bea50ffe6cb4" target="_blank">Linux Fundamentals</a></li>
+    <li><a href="https://academy.hackthebox.com/achievement/badge/35a1795e-f12d-11f0-9254-bea50ffe6cb4" target="_blank">Windows Fundamentals</a></li>
+    <li><a href="https://academy.hackthebox.com/achievement/badge/1d7aa8f1-0a49-11f1-9254-bea50ffe6cb4" target="_blank">Vulnerability Assessment</a></li>
+  </ul>
+
+  <p><strong>Problem Statement:</strong><br>
+  Analyze Linux and Windows systems to identify misconfigurations, 
+  weak permissions, and potential privilege escalation vectors.
   </p>
+
+  <p><strong>Approach:</strong></p>
+  <ul>
+    <li>Enumerated users, groups, and file permissions</li>
+    <li>Analyzed system services and scheduled tasks</li>
+    <li>Identified weak configurations and insecure services</li>
+  </ul>
+
+  <p><strong>Tools Used:</strong> LinPEAS, built-in system utilities, command-line tools</p>
+
+  <p><strong>Key Lessons Learned:</strong></p>
+  <ul>
+    <li>Weak configurations often create high-risk vulnerabilities</li>
+    <li>Systematic enumeration improves efficiency</li>
+    <li>Security hardening reduces privilege escalation risks</li>
+  </ul>
+  </div>
+
+
+  <div class="cert-category">
+    <h3>🌐 Web Application Security Testing</h3>
+
+  <p><strong>Related Module:</strong></p>
+  <ul>
+    <li><a href="https://academy.hackthebox.com/achievement/badge/3c16345e-f15e-11f0-9254-bea50ffe6cb4" target="_blank">Introduction to Web Applications</a></li>
+  </ul>
+
+  <p><strong>Problem Statement:</strong><br>
+  Assess a web application for common vulnerabilities such as improper input 
+  validation, exposed directories, and insecure authentication mechanisms.
+  </p>
+
+  <p><strong>Approach:</strong></p>
+  <ul>
+    <li>Manual browsing and source code inspection</li>
+    <li>Directory enumeration</li>
+    <li>Identification of insecure configurations</li>
+  </ul>
+
+  <p><strong>Tools Used:</strong> Browser DevTools, Gobuster, Curl</p>
+
+  <p><strong>Key Lessons Learned:</strong></p>
+  <ul>
+    <li>Input validation is critical in web security</li>
+    <li>Small misconfigurations can expose sensitive data</li>
+    <li>Understanding HTTP fundamentals improves vulnerability detection</li>
+  </ul>
+  </div>
+
 </section>
