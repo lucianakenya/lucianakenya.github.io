@@ -244,3 +244,34 @@ body {
     <a href="https://www.linkedin.com/in/lucy-nyambura-5704a1232" target="_blank">LinkedIn profile</a>.
   </p>
 </section>
+<section id="lab-challenges">
+  <h2 class="section-title">🔬 Lab Challenges & Practical Training</h2>
+
+  <div class="cert-category">
+    <h3>🛡️ Hack The Box Academy</h3>
+    <div class="cert-button-group">
+      <a href="https://academy.hackthebox.com/achievement/badge/b0945e4d-f228-11f0-9254-bea50ffe6cb4" target="_blank" class="cert-button">
+        <i class="fas fa-flask"></i> Linux Fundamentals
+      </a>
+      <a href="https://academy.hackthebox.com/achievement/badge/996b074f-036d-11f1-9254-bea50ffe6cb4" target="_blank" class="cert-button">
+        <i class="fas fa-flask"></i> Network Enumeration with Nmap
+      </a>
+      <a href="https://academy.hackthebox.com/achievement/badge/264e7011-00f0-11f1-9254-bea50ffe6cb4" target="_blank" class="cert-button">
+        <i class="fas fa-flask"></i> Introduction to Networking
+      </a>
+      <a href="https://academy.hackthebox.com/achievement/badge/35a1795e-f12d-11f0-9254-bea50ffe6cb4" target="_blank" class="cert-button">
+        <i class="fas fa-flask"></i> Windows Fundamentals
+      </a>
+      <a href="https://academy.hackthebox.com/achievement/badge/3c16345e-f15e-11f0-9254-bea50ffe6cb4" target="_blank" class="cert-button">
+        <i class="fas fa-flask"></i> Introduction to Web Applications
+      </a>
+      <a href="https://academy.hackthebox.com/achievement/badge/1d7aa8f1-0a49-11f1-9254-bea50ffe6cb4" target="_blank" class="cert-button">
+        <i class="fas fa-flask"></i> Vulnerability Assessment
+      </a>
+    </div>
+  </div>
+
+  <p class="cert-note">
+    🧪 Continuous hands-on cybersecurity training through real-world lab simulations, network enumeration, vulnerability analysis, and system exploitation.
+  </p>
+</section>
